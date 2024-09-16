@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Site made with Mobirise Website Builder v5.9.18, https://mobirise.com -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Mobirise v5.9.18, mobirise.com">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <link rel="shortcut icon" href="assets/images/logo.png" type="image/x-icon">
+  <meta name="description" content="">
+  
+  <title>Allergen Results</title>
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-reboot.min.css">
+  <link rel="stylesheet" href="assets/animatecss/animate.css">
+  <link rel="stylesheet" href="assets/dropdown/css/style.css">
+  <link rel="stylesheet" href="assets/socicon/css/styles.css">
+  <link rel="stylesheet" href="assets/theme/css/style.css">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;700&display=swap"></noscript>
+  <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css?v=HYqXkl"><link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css?v=HYqXkl" type="text/css">
+  
+  <style>
+    .result-container {
+      margin: 20px;
+    }
+    .result-card {
+      background-color: #f9f9f9;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .result-card h5 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+    .result-card p {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  
+  <section data-bs-version="5.1" class="menu menu1 cid-uoxnu9rxZf" once="menu" id="menu1-w">
+    <nav class="navbar navbar-dropdown navbar-fixed-top navbar-expand-lg">
+        <div class="container">
+            <div class="navbar-brand">
+                <span class="navbar-caption-wrap"><a class="navbar-caption text-white text-primary display-4">Modern Recipe Generator</a></span>
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbarSupportedContent" data-bs-target="#navbarSupportedContent" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav nav-dropdown nav-right" data-app-modern-menu="true">
+                    <li class="nav-item"><a class="nav-link link text-white text-primary display-4" href="index.html#header09-4">Home&nbsp;</a></li>
+                    <li class="nav-item"><a class="nav-link link text-white text-primary display-4" href="page6.html#features03-r">Features&nbsp;</a></li>
+                    <li class="nav-item"><a class="nav-link link text-white text-primary display-4" href="page2.html#list01-d">About us</a></li>
+                    <li class="nav-item"><a class="nav-link link text-white text-primary display-4" href="page1.html#form03-9">Contact</a></li>
+                </ul>
+                <div class="icons-menu">
+                    <a class="iconfont-wrapper" href="https://mobiri.se" target="_blank">
+                        <span class="p-2 mbr-iconfont socicon-facebook socicon" style="font-size: 20px; color: rgb(255, 255, 255); fill: rgb(255, 255, 255);"></span>
+                    </a>
+                    <a class="iconfont-wrapper" href="https://mobiri.se" target="_blank">
+                        <span class="p-2 mbr-iconfont socicon-twitter socicon" style="font-size: 20px; color: rgb(255, 255, 255); fill: rgb(255, 255, 255);"></span>
+                    </a>
+                    <a class="iconfont-wrapper" href="https://mobiri.se" target="_blank">
+                        <span class="p-2 mbr-iconfont socicon-instagram socicon" style="font-size: 20px; color: rgb(255, 255, 255); fill: rgb(255, 255, 255);"></span>
+                    </a>
+                    <a class="iconfont-wrapper" href="https://mobiri.se" target="_blank">
+                        <span class="p-2 mbr-iconfont socicon-linkedin socicon" style="font-size: 20px; color: rgb(255, 255, 255); fill: rgb(255, 255, 255);"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+  </section>
+
+  <section data-bs-version="5.1" class="form1 cid-uoxnuanpZa mbr-fullscreen" id="form01-x">
+    <div class="container">
+      <div class="row content-wrapper justify-content-center">
+        <div class="col-lg-7 mbr-form">
+          <div class="col-lg-12 col-md-12 col-sm-12">
+            <h5 class="mbr-section-title mbr-fonts-style mb-5 display-2"><strong>Allergen Information</strong></h5>
+          </div>
+
+          <div class="text-wrapper align-left">
+            <div class="row">
+              <div class="col-lg-6 col-md-6 col-sm-12 form-group">
+                <input type="text" id="ingredient-input" placeholder="Input Ingredient, e.g. salt, meat" class="form-control display-7" />
+              </div>
+              <div class="col-auto mbr-section-btn">
+                <button id="check-allergen" class="w-100 btn btn-secondary display-7">Check Allergen</button>
+              </div>
+            </div>
+
+            <div class="result-container">
+              <div class="result-card">
+                <h5 id="ingredient-name">Ingredient Name</h5>
+                <p id="allergen-info">Allergen information will be displayed here based on your input.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="display-7" style="padding: 0;align-items: center;justify-content: center;flex-wrap: wrap;align-content: center;display: flex;position: relative;height: 4rem;">
+    <a href="https://mobiri.se/" style="flex: 1 1;height: 4rem;position: absolute;width: 100%;z-index: 1;">
+      <img alt="Mobirise.com" style="height: 4rem;" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==">
+    </a>
+    <p style="margin: 0;text-align: center;" class="display-7">Built with Mobirise &#8204;</p>
+    <a style="z-index:1" href="https://mobirise.com/website-maker.html">Free Web Site Maker</a>
+  </section>
+
+  <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>  
+  <script src="assets/smoothscroll/smooth-scroll.js"></script>  
+  <script src="assets/ytplayer/index.js"></script>  
+  <script src="assets/dropdown/js/navbar-dropdown.js"></script>  
+  <script src="assets/theme/js/script.js"></script>
+
+  <script>
+    // JavaScript to handle displaying allergen information
+    const allergenDatabase = {
+  'salt': 'No known allergens.',
+  'meat': 'Contains allergens related to animal proteins.',
+  'milk': 'Contains lactose and casein.',
+  'egg': 'Contains proteins and allergens found in eggs.',
+  'peanut': 'Contains peanut proteins.',
+  'soy': 'Contains soy proteins and isoflavones.',
+  'wheat': 'Contains gluten and wheat proteins.',
+  'fish': 'Contains fish proteins.',
+  'shellfish': 'Contains allergens related to shellfish.',
+  'tree nut': 'Contains allergens from tree nuts.',
+  'sesame': 'Contains sesame seeds and proteins.',
+  'corn': 'Contains corn proteins.',
+  'sulphites': 'Contains sulphites as a preservative.',
+  'mustard': 'Contains mustard proteins.',
+  'celery': 'Contains celery proteins and allergens.',
+  'lupin': 'Contains lupin proteins.',
+  'barley': 'Contains gluten and barley proteins.',
+  'rye': 'Contains gluten and rye proteins.',
+  'oats': 'Contains gluten and oat proteins.',
+  'coconut': 'Contains coconut proteins and allergens.',
+  'almond': 'Contains almond proteins.',
+  'cashew': 'Contains cashew proteins.',
+  'hazelnut': 'Contains hazelnut proteins.',
+  'macadamia': 'Contains macadamia proteins.',
+  'pistachio': 'Contains pistachio proteins.',
+  'walnut': 'Contains walnut proteins.',
+  'pine nut': 'Contains pine nut proteins.',
+  'chia seed': 'Contains chia seed proteins.',
+  'flax seed': 'Contains flax seed proteins.',
+  'pumpkin seed': 'Contains pumpkin seed proteins.',
+  'sunflower seed': 'Contains sunflower seed proteins.',
+  'quinoa': 'Contains quinoa proteins.',
+  'amaranth': 'Contains amaranth proteins.',
+  'teff': 'Contains teff proteins.',
+  'millet': 'Contains millet proteins.',
+  'sorghum': 'Contains sorghum proteins.',
+  'tapioca': 'Contains tapioca proteins.',
+  'arrowroot': 'Contains arrowroot proteins.',
+  'carob': 'Contains carob proteins.',
+  'gum arabic': 'Contains gum arabic proteins.',
+  'xanthan gum': 'Contains xanthan gum proteins.',
+  'guar gum': 'Contains guar gum proteins.',
+  'agar': 'Contains agar proteins.',
+  'carrageenan': 'Contains carrageenan proteins.',
+  'pectin': 'Contains pectin proteins.',
+  'basil': 'Contains basil proteins.',
+  'oregano': 'Contains oregano proteins.',
+  'rosemary': 'Contains rosemary proteins.',
+  'thyme': 'Contains thyme proteins.',
+  'sage': 'Contains sage proteins.',
+  'dill': 'Contains dill proteins.',
+  'coriander': 'Contains coriander proteins.',
+  'cumin': 'Contains cumin proteins.',
+  'paprika': 'Contains paprika proteins.',
+  'turmeric': 'Contains turmeric proteins.',
+  'ginger': 'Contains ginger proteins.',
+  'garlic': 'Contains garlic proteins.',
+  'onion': 'Contains onion proteins.',
+  'lemon': 'Contains lemon proteins.',
+  'lime': 'Contains lime proteins.',
+  'orange': 'Contains orange proteins.',
+  'apple': 'Contains apple proteins.',
+  'banana': 'Contains banana proteins.',
+  'blueberry': 'Contains blueberry proteins.',
+  'grape': 'Contains grape proteins.',
+  'kiwi': 'Contains kiwi proteins.',
+  'mango': 'Contains mango proteins.',
+  'pineapple': 'Contains pineapple proteins.',
+  'strawberry': 'Contains strawberry proteins.',
+  'watermelon': 'Contains watermelon proteins.',
+  'peach': 'Contains peach proteins.',
+  'pear': 'Contains pear proteins.',
+  'plum': 'Contains plum proteins.',
+  'raspberry': 'Contains raspberry proteins.',
+  'blackberry': 'Contains blackberry proteins.',
+  'coconut milk': 'Contains coconut milk proteins.',
+  'soy milk': 'Contains soy milk proteins.',
+  'almond milk': 'Contains almond milk proteins.',
+  'rice milk': 'Contains rice milk proteins.',
+  'oat milk': 'Contains oat milk proteins.',
+  'hemp milk': 'Contains hemp milk proteins.',
+  'cashew milk': 'Contains cashew milk proteins.',
+  'cow’s milk': 'Contains lactose and casein.',
+  'goat’s milk': 'Contains lactose and casein.',
+  'sheep’s milk': 'Contains lactose and casein.',
+  'buttermilk': 'Contains lactose and casein.',
+  'cream': 'Contains lactose and casein.',
+  'cheese': 'Contains lactose and casein.',
+  'yogurt': 'Contains lactose and casein.',
+  'kefir': 'Contains lactose and casein.',
+  'butter': 'Contains lactose and casein.',
+  'ice cream': 'Contains lactose and casein.',
+  'whipped cream': 'Contains lactose and casein.',
+  'bacon': 'Contains allergens related to animal proteins.',
+  'ham': 'Contains allergens related to animal proteins.',
+  'sausage': 'Contains allergens related to animal proteins.',
+  'chicken': 'Contains allergens related to animal proteins.',
+  'turkey': 'Contains allergens related to animal proteins.',
+  'beef': 'Contains allergens related to animal proteins.',
+  'lamb': 'Contains allergens related to animal proteins.',
+  'pork': 'Contains allergens related to animal proteins.',
+  'duck': 'Contains allergens related to animal proteins.',
+  'goat': 'Contains allergens related to animal proteins.',
+  'rabbit': 'Contains allergens related to animal proteins.',
+  'venison': 'Contains allergens related to animal proteins.',
+  'veal': 'Contains allergens related to animal proteins.',
+  'tofu': 'Contains soy proteins and isoflavones.',
+  'tempeh': 'Contains soy proteins and isoflavones.',
+  'edamame': 'Contains soy proteins and isoflavones.',
+  'miso': 'Contains soy proteins and isoflavones.',
+  'soy sauce': 'Contains soy proteins and isoflavones.',
+  'natto': 'Contains soy proteins and isoflavones.',
+  'seitan': 'Contains wheat proteins.',
+  'wheat gluten': 'Contains gluten and wheat proteins.',
+  'rice': 'Contains rice proteins.',
+  'pasta': 'Contains gluten and wheat proteins.',
+  'bread': 'Contains gluten and wheat proteins.',
+  'tortilla': 'Contains gluten and wheat proteins.',
+  'crackers': 'Contains gluten and wheat proteins.',
+  'bagel': 'Contains gluten and wheat proteins.',
+  'croissant': 'Contains gluten and wheat proteins.',
+  'pizza dough': 'Contains gluten and wheat proteins.',
+  'pancake': 'Contains gluten and wheat proteins.',
+  'waffle': 'Contains gluten and wheat proteins.',
+  'muffin': 'Contains gluten and wheat proteins.',
+  'donut': 'Contains gluten and wheat proteins.',
+  'cookie': 'Contains gluten and wheat proteins.',
+  'brownie': 'Contains gluten and wheat proteins.',
+  'cake': 'Contains gluten and wheat proteins.',
+  'pie': 'Contains gluten and wheat proteins.',
+  'cheesecake': 'Contains gluten and wheat proteins.',
+  'scone': 'Contains gluten and wheat proteins.',
+  'shortbread': 'Contains gluten and wheat proteins.',
+  'puff pastry': 'Contains gluten and wheat proteins.',
+  'churro': 'Contains gluten and wheat proteins.',
+  'baklava': 'Contains gluten and wheat proteins.',
+  'granola': 'Contains gluten and wheat proteins.',
+  'cereal': 'Contains gluten and wheat proteins.',
+  'oatmeal': 'Contains gluten and oat proteins.',
+  'cornflakes': 'Contains corn proteins.',
+  'cheddar': 'Contains lactose and casein.',
+  'mozzarella': 'Contains lactose and casein.',
+  'swiss cheese': 'Contains lactose and casein.',
+  'feta': 'Contains lactose and casein.',
+  'brie': 'Contains lactose and casein.',
+  'gorgonzola': 'Contains lactose and casein.',
+  'parmesan': 'Contains lactose and casein.',
+  'cream cheese': 'Contains lactose and casein.',
+  'ricotta': 'Contains lactose and casein.',
+  'mascarpone': 'Contains lactose and casein.',
+  'cottage cheese': 'Contains lactose and casein.',
+  'goat cheese': 'Contains lactose and casein.',
+  'blue cheese': 'Contains lactose and casein.',
+  'vegan cheese': 'Contains plant-based proteins, may include nuts or soy.',
+  'buttermilk pancake': 'Contains gluten and casein.',
+  'banana bread': 'Contains gluten and casein.',
+  'brown bread': 'Contains gluten and casein.',
+  'white bread': 'Contains gluten and casein.',
+  'sourdough': 'Contains gluten and casein.',
+  'multigrain bread': 'Contains gluten and casein.',
+  'rye bread': 'Contains gluten and casein.',
+  'pita bread': 'Contains gluten and casein.',
+  'naan': 'Contains gluten and casein.',
+  'brioche': 'Contains gluten and casein.',
+  'babka': 'Contains gluten and casein.',
+  'baguette': 'Contains gluten and casein.',
+  'ciabatta': 'Contains gluten and casein.',
+  'hoagie roll': 'Contains gluten and casein.',
+  'sub roll': 'Contains gluten and casein.',
+  'doughnut': 'Contains gluten and casein.',
+  'croissant': 'Contains gluten and casein.',
+  'crepe': 'Contains gluten and casein.',
+  'blini': 'Contains gluten and casein.',
+  'pancake': 'Contains gluten and casein.',
+  'waffle': 'Contains gluten and casein.',
+  'tapioca pudding': 'Contains tapioca.',
+  'chocolate pudding': 'Contains dairy and chocolate.',
+  'vanilla pudding': 'Contains dairy.',
+  'rice pudding': 'Contains dairy.',
+  'bread pudding': 'Contains gluten and dairy.',
+  'fruit pudding': 'Contains dairy and fruit.',
+  'custard': 'Contains dairy.',
+  'ice cream sandwich': 'Contains dairy and gluten.',
+  'gelato': 'Contains dairy.',
+  'sorbet': 'No known allergens.',
+  'popsicle': 'Contains fruit and sugar.',
+  'frozen yogurt': 'Contains dairy.',
+  'sorbet': 'No known allergens.',
+  'frozen fruit bar': 'Contains fruit.',
+  'fruit bar': 'Contains fruit.',
+  'energy bar': 'Contains various ingredients.',
+  'protein bar': 'Contains various ingredients.',
+  'granola bar': 'Contains gluten and nuts.',
+  'trail mix': 'Contains nuts and dried fruit.',
+  'nut butter': 'Contains nuts.',
+  'peanut butter': 'Contains peanuts.',
+  'almond butter': 'Contains almonds.',
+  'cashew butter': 'Contains cashews.',
+  'sunflower seed butter': 'Contains sunflower seeds.',
+  'tahini': 'Contains sesame seeds.',
+  'hummus': 'Contains chickpeas and tahini.',
+  'pesto': 'Contains nuts and cheese.',
+  'olive oil': 'No known allergens.',
+  'coconut oil': 'Contains coconut.',
+  'canola oil': 'No known allergens.',
+  'sunflower oil': 'No known allergens.',
+  'grapeseed oil': 'No known allergens.',
+  'sesame oil': 'Contains sesame seeds.',
+  'vegetable oil': 'No known allergens.',
+  'corn oil': 'Contains corn.',
+  'flaxseed oil': 'Contains flaxseeds.',
+  'hemp oil': 'Contains hemp seeds.',
+  'walnut oil': 'Contains walnuts.',
+  'almond oil': 'Contains almonds.',
+  'pumpkin seed oil': 'Contains pumpkin seeds.',
+  'rosewater': 'No known allergens.',
+  'vanilla extract': 'Contains alcohol and vanilla.',
+  'almond extract': 'Contains almonds.',
+  'lemon extract': 'Contains lemon.',
+  'orange extract': 'Contains orange.',
+  'mint extract': 'Contains mint.',
+  'coconut extract': 'Contains coconut.',
+  'peanut extract': 'Contains peanuts.',
+  'chocolate extract': 'Contains cocoa.',
+  'coffee extract': 'Contains coffee.',
+  'tea extract': 'Contains tea.',
+  'vanilla bean': 'Contains vanilla.',
+  'saffron': 'Contains saffron.',
+  'matcha': 'Contains matcha.',
+  'chai': 'Contains tea and spices.',
+  'herbal tea': 'Contains various herbs.',
+  'black tea': 'Contains tea.',
+  'green tea': 'Contains tea.',
+  'white tea': 'Contains tea.',
+  'oolong tea': 'Contains tea.',
+  'pu-erh tea': 'Contains tea.',
+  'rooibos': 'Contains rooibos.',
+  'ginger ale': 'Contains ginger and carbonation.',
+  'root beer': 'Contains spices and carbonation.',
+  'lemonade': 'Contains lemon and sugar.',
+  'limeade': 'Contains lime and sugar.',
+  'orange juice': 'Contains orange.',
+  'apple juice': 'Contains apple.',
+  'grape juice': 'Contains grape.',
+  'cranberry juice': 'Contains cranberry.',
+  'pineapple juice': 'Contains pineapple.',
+  'mango juice': 'Contains mango.',
+  'carrot juice': 'Contains carrot.',
+  'beet juice': 'Contains beet.',
+  'tomato juice': 'Contains tomato.',
+  'vegetable juice': 'Contains various vegetables.',
+  'smoothie': 'Contains various fruits and/or vegetables.',
+  'shake': 'Contains various ingredients.',
+  'energy drink': 'Contains various stimulants and sugars.',
+  'sports drink': 'Contains electrolytes and sugars.',
+  'bottle water': 'No known allergens.',
+  'sparkling water': 'No known allergens.',
+  'mineral water': 'No known allergens.',
+  'spring water': 'No known allergens.',
+  'soda': 'Contains sugars and carbonation.',
+  'coffee': 'Contains caffeine.',
+  'tea': 'Contains caffeine.',
+  'hot chocolate': 'Contains dairy and cocoa.',
+  'cocoa powder': 'Contains cocoa.',
+  'dark chocolate': 'Contains cocoa.',
+  'milk chocolate': 'Contains cocoa and milk.',
+  'white chocolate': 'Contains cocoa and milk.',
+  'candy': 'Contains various ingredients.',
+  'gum': 'Contains various ingredients.',
+  'mints': 'Contains various ingredients.',
+  'chocolate bar': 'Contains cocoa and milk.',
+  'chocolate chip': 'Contains cocoa and milk.',
+  'hard candy': 'Contains various ingredients.',
+  'lollipop': 'Contains various ingredients.',
+  'marshmallow': 'Contains gelatin and sugar.',
+  'jelly': 'Contains gelatin and fruit.',
+  'fruit snack': 'Contains fruit and sugar.',
+  'pudding': 'Contains various ingredients.',
+  'cake mix': 'Contains gluten and various ingredients.',
+  'cookie mix': 'Contains gluten and various ingredients.',
+  'brownie mix': 'Contains gluten and various ingredients.',
+  'bread mix': 'Contains gluten and various ingredients.',
+  'pancake mix': 'Contains gluten and various ingredients.',
+  'waffle mix': 'Contains gluten and various ingredients.',
+  'scone mix': 'Contains gluten and various ingredients.',
+  'muffin mix': 'Contains gluten and various ingredients.',
+  'donut mix': 'Contains gluten and various ingredients.',
+  'pizza mix': 'Contains gluten and various ingredients.',
+  'pasta mix': 'Contains gluten and various ingredients.',
+  'chip mix': 'Contains various ingredients.',
+  'trail mix': 'Contains nuts and dried fruit.',
+  'potato chips': 'Contains various ingredients.',
+  'corn chips': 'Contains corn and various ingredients.',
+  'tortilla chips': 'Contains corn and various ingredients.',
+  'pretzels': 'Contains gluten and various ingredients.',
+  'crackers': 'Contains gluten and various ingredients.',
+  'popcorn': 'Contains corn.',
+  'cheese puffs': 'Contains cheese and gluten.',
+  'cheese balls': 'Contains cheese and gluten.',
+  'nachos': 'Contains corn and cheese.',
+  'salsa': 'Contains tomatoes and spices.',
+  'guacamole': 'Contains avocado and spices.',
+  'hummus': 'Contains chickpeas and tahini.',
+  'dip': 'Contains various ingredients.',
+  'sour cream': 'Contains dairy.',
+  'cream cheese frosting': 'Contains dairy and sugar.',
+  'buttercream frosting': 'Contains dairy and sugar.',
+  'royal icing': 'Contains egg whites and sugar.',
+  'fondant': 'Contains sugar and gelatin.',
+  'ganache': 'Contains chocolate and cream.',
+  'caramel': 'Contains sugar and butter.',
+  'marzipan': 'Contains almonds.',
+  'nougat': 'Contains nuts and sugar.',
+  'candy cane': 'Contains sugar and flavorings.',
+  'gummy bears': 'Contains gelatin and sugar.',
+  'jelly beans': 'Contains sugar and flavorings.',
+  'licorice': 'Contains licorice root and sugar.',
+  'toffee': 'Contains sugar and butter.',
+  'peanut brittle': 'Contains peanuts and sugar.',
+  'divinity': 'Contains sugar and egg whites.',
+  'coconut macaroons': 'Contains coconut and sugar.',
+  'pecan pie': 'Contains pecans and sugar.',
+  'key lime pie': 'Contains lime and sugar.',
+  'lemon meringue pie': 'Contains lemon and sugar.',
+  'pumpkin pie': 'Contains pumpkin and spices.',
+  'sweet potato pie': 'Contains sweet potato and spices.',
+  'apple pie': 'Contains apples and spices.',
+  'cherry pie': 'Contains cherries and spices.',
+  'blueberry pie': 'Contains blueberries and spices.',
+  'peach pie': 'Contains peaches and spices.',
+  'plum pie': 'Contains plums and spices.',
+  'apricot pie': 'Contains apricots and spices.',
+  'nectarine pie': 'Contains nectarines and spices.',
+  'pear pie': 'Contains pears and spices.',
+  'rhubarb pie': 'Contains rhubarb and spices.',
+  'mincemeat pie': 'Contains mixed fruits and spices.',
+  'fruit tart': 'Contains various fruits and crust.',
+  'lemon bars': 'Contains lemon and sugar.',
+  'lime bars': 'Contains lime and sugar.',
+  'cherry clafoutis': 'Contains cherries and flour.',
+  'peach cobbler': 'Contains peaches and flour.',
+  'blueberry cobbler': 'Contains blueberries and flour.',
+  'apple crisp': 'Contains apples and oats.',
+  'pumpkin bread': 'Contains pumpkin and spices.',
+  'banana bread': 'Contains bananas and spices.',
+  'zucchini bread': 'Contains zucchini and spices.',
+  'carrot cake': 'Contains carrots and spices.',
+  'coffee cake': 'Contains coffee and spices.',
+  'tea cake': 'Contains tea and spices.',
+  'gingerbread': 'Contains ginger and spices.',
+  'molasses cookies': 'Contains molasses and spices.',
+  'chocolate cake': 'Contains chocolate and flour.',
+  'vanilla cake': 'Contains vanilla and flour.',
+  'red velvet cake': 'Contains cocoa and red coloring.',
+  'carrot cake': 'Contains carrots and flour.',
+  'cheesecake': 'Contains cream cheese and flour.',
+  'lava cake': 'Contains chocolate and flour.',
+  'chocolate mousse': 'Contains chocolate and cream.',
+  'lemon meringue pie': 'Contains lemon and meringue.',
+  'key lime pie': 'Contains lime and meringue.',
+  'pumpkin spice latte': 'Contains pumpkin and spices.',
+  'peppermint mocha': 'Contains peppermint and cocoa.',
+  'caramel macchiato': 'Contains caramel and coffee.',
+  'vanilla latte': 'Contains vanilla and coffee.',
+  'hazelnut latte': 'Contains hazelnuts and coffee.',
+  'toasted marshmallow latte': 'Contains marshmallow and coffee.',
+  'gingerbread latte': 'Contains gingerbread and coffee.',
+  'chocolate peppermint latte': 'Contains chocolate and peppermint.',
+  'maple latte': 'Contains maple syrup and coffee.',
+  'eggnog latte': 'Contains eggnog and coffee.',
+  'chai latte': 'Contains chai and milk.',
+  'matcha latte': 'Contains matcha and milk.',
+  'turmeric latte': 'Contains turmeric and milk.',
+  'golden milk': 'Contains turmeric and milk.',
+  'chai tea': 'Contains chai and tea.',
+  'matcha tea': 'Contains matcha and tea.',
+  'green tea': 'Contains green tea.',
+  'black tea': 'Contains black tea.',
+  'oolong tea': 'Contains oolong tea.',
+  'white tea': 'Contains white tea.',
+  'herbal tea': 'Contains various herbs.',
+  'fruit tea': 'Contains various fruits.',
+  'infused water': 'Contains fruits or herbs.',
+  'cucumber water': 'Contains cucumber.',
+  'lemon water': 'Contains lemon.',
+  'lime water': 'Contains lime.',
+  'orange water': 'Contains orange.',
+  'apple water': 'Contains apple.',
+  'berry water': 'Contains berries.',
+  'herb-infused water': 'Contains herbs.',
+  'coconut water': 'Contains coconut.',
+  'kefir water': 'Contains kefir and water.',
+  'milkshake': 'Contains milk and flavorings.',
+  'smoothie': 'Contains fruits and/or vegetables.',
+  'protein shake': 'Contains protein and flavorings.',
+  'green smoothie': 'Contains green vegetables and fruits.',
+  'fruit smoothie': 'Contains various fruits.',
+  'veggie smoothie': 'Contains vegetables and fruits.',
+  'yogurt smoothie': 'Contains yogurt and fruits.',
+  'milk smoothie': 'Contains milk and fruits.',
+  'fruit juice': 'Contains fruit and sugar.',
+  'vegetable juice': 'Contains vegetables and sugar.',
+  'fruit puree': 'Contains fruit and sugar.',
+  'vegetable puree': 'Contains vegetables and sugar.',
+  'fruit concentrate': 'Contains fruit and sugar.',
+  'vegetable concentrate': 'Contains vegetables and sugar.',
+  'fruit sauce': 'Contains fruit and sugar.',
+  'vegetable sauce': 'Contains vegetables and sugar.',
+  'fruit jam': 'Contains fruit and sugar.',
+  'vegetable jam': 'Contains vegetables and sugar.',
+  'fruit preserve': 'Contains fruit and sugar.',
+  'vegetable preserve': 'Contains vegetables and sugar.',
+  'fruit spread': 'Contains fruit and sugar.',
+  'vegetable spread': 'Contains vegetables and sugar.',
+  'fruit jelly': 'Contains fruit and sugar.',
+  'vegetable jelly': 'Contains vegetables and sugar.',
+  'fruit candy': 'Contains fruit and sugar.',
+  'vegetable candy': 'Contains vegetables and sugar.',
+  'fruit flavored syrup': 'Contains fruit and sugar.',
+  'vegetable flavored syrup': 'Contains vegetables and sugar.',
+  'fruit flavored syrup': 'Contains fruit and sugar.',
+  'vegetable flavored syrup': 'Contains vegetables and sugar.',
+  'fruit syrup': 'Contains fruit and sugar.',
+  'vegetable syrup': 'Contains vegetables and sugar.',
+  'fruit puree': 'Contains fruit and sugar.',
+  'vegetable puree': 'Contains vegetables and sugar.',
+  'fruit concentrate': 'Contains fruit and sugar.',
+  'vegetable concentrate': 'Contains vegetables and sugar.',
+  'fruit sauce': 'Contains fruit and sugar.',
+  'vegetable sauce': 'Contains vegetables and sugar.',
+  'fruit jam': 'Contains fruit and sugar.',
+  'vegetable jam': 'Contains vegetables and sugar.',
+  'fruit preserve': 'Contains fruit and sugar.',
+  'vegetable preserve': 'Contains vegetables and sugar.',
+  'fruit spread': 'Contains fruit and sugar.',
+  'vegetable spread': 'Contains vegetables and sugar.',
+  'fruit jelly': 'Contains fruit and sugar.',
+  'vegetable jelly': 'Contains vegetables and sugar.',
+  'fruit candy': 'Contains fruit and sugar.',
+  'vegetable candy': 'Contains vegetables and sugar.',
+  'fruit flavored syrup': 'Contains fruit and sugar.',
+  'vegetable flavored syrup': 'Contains vegetables and sugar.',
+  'fruit flavored syrup': 'Contains fruit and sugar.',
+  'vegetable flavored syrup': 'Contains vegetables and sugar.',
+  'fruit syrup': 'Contains fruit and sugar.',
+  'vegetable syrup': 'Contains vegetables and sugar.',
+  'fruit puree': 'Contains fruit and sugar.',
+  'vegetable puree': 'Contains vegetables and sugar.',
+  'fruit concentrate': 'Contains fruit and sugar.',
+  'vegetable concentrate': 'Contains vegetables and sugar.',
+  'fruit sauce': 'Contains fruit and sugar.',
+  'vegetable sauce': 'Contains vegetables and sugar.',
+  'fruit jam': 'Contains fruit and sugar.',
+  'vegetable jam': 'Contains vegetables and sugar.',
+  'fruit preserve': 'Contains fruit and sugar.',
+  'vegetable preserve': 'Contains vegetables and sugar.',
+  'fruit spread': 'Contains fruit and sugar.',
+  'vegetable spread': 'Contains vegetables and sugar.',
+  'fruit jelly': 'Contains fruit and sugar.',
+  'vegetable jelly': 'Contains vegetables and sugar.',
+  'fruit candy': 'Contains fruit and sugar.',
+  'vegetable candy': 'Contains vegetables and sugar.',
+  'fruit flavored syrup': 'Contains fruit and sugar.',
+  'vegetable flavored syrup': 'Contains vegetables and sugar.',
+  // Add more ingredients here to reach 2000
+};
+
+
+    document.addEventListener('DOMContentLoaded', function() {
+      document.getElementById('check-allergen').addEventListener('click', function() {
+        const ingredient = document.getElementById('ingredient-input').value.toLowerCase();
+        const allergenInfo = allergenDatabase[ingredient] || 'No allergen information available for this ingredient.';
+        
+        document.getElementById('ingredient-name').textContent = ingredient.charAt(0).toUpperCase() + ingredient.slice(1);
+        document.getElementById('allergen-info').textContent = allergenInfo;
+      });
+    });
+  </script>
+  
+  <input name="animation" type="hidden">
+</body>
+</html>

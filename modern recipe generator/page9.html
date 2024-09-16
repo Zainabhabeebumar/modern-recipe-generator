@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Site made with Mobirise Website Builder v5.9.18, https://mobirise.com -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Mobirise v5.9.18, mobirise.com">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <link rel="shortcut icon" href="assets/images/logo.png" type="image/x-icon">
+  <meta name="description" content="Macronutrient breakdown for recipes">
+
+  <title>Macro Nutrient Breakdown</title>
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-reboot.min.css">
+  <link rel="stylesheet" href="assets/animatecss/animate.css">
+  <link rel="stylesheet" href="assets/dropdown/css/style.css">
+  <link rel="stylesheet" href="assets/socicon/css/styles.css">
+  <link rel="stylesheet" href="assets/theme/css/style.css">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;700&display=swap"></noscript>
+  <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css?v=3tMt6C"><link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css?v=3tMt6C" type="text/css">
+</head>
+<body>
+  <section data-bs-version="5.1" class="menu menu1 cid-uoxo1qtthx" once="menu" id="menu1-y">
+    <nav class="navbar navbar-dropdown navbar-fixed-top navbar-expand-lg">
+      <div class="container">
+        <div class="navbar-brand">
+          <span class="navbar-caption-wrap">
+            <a class="navbar-caption text-white text-primary display-4">Modern Recipe Generator</a>
+          </span>
+        </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav nav-dropdown nav-right" data-app-modern-menu="true">
+            <li class="nav-item"><a class="nav-link link text-white text-primary display-4" href="index.html#header09-4">Home</a></li>
+            <li class="nav-item"><a class="nav-link link text-white text-primary display-4" href="page6.html#features03-r">Features</a></li>
+            <li class="nav-item"><a class="nav-link link text-white text-primary display-4" href="page2.html#list01-d">About Us</a></li>
+            <li class="nav-item"><a class="nav-link link text-white text-primary display-4" href="page1.html#form03-9">Contact</a></li>
+          </ul>
+          <div class="icons-menu">
+            <a class="iconfont-wrapper" href="https://mobiri.se" target="_blank">
+              <span class="p-2 mbr-iconfont socicon-facebook socicon" style="font-size: 20px; color: rgb(255, 255, 255);"></span>
+            </a>
+            <a class="iconfont-wrapper" href="https://mobiri.se" target="_blank">
+              <span class="p-2 mbr-iconfont socicon-twitter socicon" style="font-size: 20px; color: rgb(255, 255, 255);"></span>
+            </a>
+            <a class="iconfont-wrapper" href="https://mobiri.se" target="_blank">
+              <span class="p-2 mbr-iconfont socicon-instagram socicon" style="font-size: 20px; color: rgb(255, 255, 255);"></span>
+            </a>
+            <a class="iconfont-wrapper" href="https://mobiri.se" target="_blank">
+              <span class="p-2 mbr-iconfont socicon-linkedin socicon" style="font-size: 20px; color: rgb(255, 255, 255);"></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </section>
+
+  <section data-bs-version="5.1" class="form1 cid-uoxo1r7h67 mbr-fullscreen" id="form01-z">
+    <div class="container-fluid">
+      <div class="row content-wrapper justify-content-center">
+        <div class="col-lg-7 mbr-form">
+          <div class="col-lg-12 col-md-12 col-sm-12">
+            <h5 class="mbr-section-title mbr-fonts-style mb-5 display-2"><strong>Display protein, carbohydrate, and fat content in your recipes.</strong></h5>
+          </div>
+          <div class="text-wrapper align-left">
+            <!--Formbuilder Form-->
+            <form id="ingredient-form" class="mbr-form form-with-styler">
+              <div class="row">
+                <div hidden="hidden" data-form-alert-danger="" class="alert alert-danger col-12">
+                  Oops...! Some problem!
+                </div>
+              </div>
+              <div class="dragArea row">
+                <div data-for="ingredient" class="col-lg-6 col-md-6 col-sm-12 form-group">
+                  <label for="ingredient-form01-z">Input Ingredient (e.g., salt, meat)</label>
+                  <input type="text" name="ingredient" placeholder="Input Ingredient, e.g., salt, meat" data-form-field="ingredient" class="form-control display-7" id="ingredient-form01-z">
+                </div>
+                <div class="col-auto mbr-section-btn">
+                  <button type="button" class="btn btn-secondary display-7" onclick="getMacronutrients()">Display</button>
+                </div>
+              </div>
+            </form>
+            <div id="results" class="mt-4"></div>
+            <!--Formbuilder Form-->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="display-7" style="padding: 0;align-items: center;justify-content: center;flex-wrap: wrap;align-content: center;display: flex;position: relative;height: 4rem;">
+    <a href="https://mobiri.se/" style="flex: 1 1;height: 4rem;position: absolute;width: 100%;z-index: 1;">
+      <img alt="Mobirise" style="height: 4rem;" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==">
+    </a>
+    <p style="margin: 0;text-align: center;" class="display-7">Built with Mobirise &#8204;</p>
+    <a style="z-index:1" href="https://mobirise.com/website-design-software.html">Free Web Designing Software</a>
+  </section>
+
+  <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>  
+  <script src="assets/smoothscroll/smooth-scroll.js"></script>  
+  <script src="assets/ytplayer/index.js"></script>  
+  <script src="assets/dropdown/js/navbar-dropdown.js"></script>  
+  <script src="assets/theme/js/script.js"></script>
+
+  <script>
+    // Static database for macronutrients
+    const macronutrientDatabase = {
+  'salt': { protein: 0, carbohydrates: 0, fat: 0 },
+  'meat': { protein: 26, carbohydrates: 0, fat: 15 },
+  'milk': { protein: 3.4, carbohydrates: 4.8, fat: 3.6 },
+  'egg': { protein: 6.3, carbohydrates: 0.6, fat: 5 },
+  'peanut': { protein: 25, carbohydrates: 16, fat: 49 },
+  'soy': { protein: 36, carbohydrates: 30, fat: 20 },
+  'wheat': { protein: 13, carbohydrates: 71, fat: 2.5 },
+  'fish': { protein: 20, carbohydrates: 0, fat: 5 },
+  'shellfish': { protein: 24, carbohydrates: 1, fat: 1 },
+  'tree nut': { protein: 20, carbohydrates: 20, fat: 50 },
+  'sesame': { protein: 18, carbohydrates: 23, fat: 50 },
+  'corn': { protein: 3.2, carbohydrates: 19, fat: 1.2 },
+  'sulphites': { protein: 0, carbohydrates: 0, fat: 0 },
+  'mustard': { protein: 5, carbohydrates: 2, fat: 10 },
+  'celery': { protein: 0.7, carbohydrates: 3, fat: 0.2 },
+  'lupin': { protein: 40, carbohydrates: 28, fat: 7 },
+  'barley': { protein: 12, carbohydrates: 73, fat: 1.2 },
+  'rye': { protein: 13, carbohydrates: 72, fat: 1.6 },
+  'oats': { protein: 16, carbohydrates: 66, fat: 6.9 },
+  'coconut': { protein: 3.3, carbohydrates: 15, fat: 33 },
+  'almond': { protein: 21, carbohydrates: 22, fat: 49 },
+  'apple': { protein: 0.3, carbohydrates: 14, fat: 0.2 },
+  'banana': { protein: 1.3, carbohydrates: 23, fat: 0.3 },
+  'orange': { protein: 0.9, carbohydrates: 12, fat: 0.1 },
+  'carrot': { protein: 0.9, carbohydrates: 10, fat: 0.2 },
+  'broccoli': { protein: 2.8, carbohydrates: 7, fat: 0.4 },
+  'spinach': { protein: 2.9, carbohydrates: 3.6, fat: 0.4 },
+  'tomato': { protein: 0.9, carbohydrates: 4, fat: 0.2 },
+  'potato': { protein: 2, carbohydrates: 17, fat: 0.2 },
+  'onion': { protein: 1.2, carbohydrates: 9, fat: 0.1 },
+  'garlic': { protein: 6.4, carbohydrates: 33, fat: 0.5 },
+  'rice': { protein: 2.7, carbohydrates: 28, fat: 0.3 },
+  'pasta': { protein: 5, carbohydrates: 31, fat: 1.1 },
+  'cheese': { protein: 25, carbohydrates: 1, fat: 33 },
+  'yogurt': { protein: 3.5, carbohydrates: 4.7, fat: 3.3 },
+  'butter': { protein: 0.9, carbohydrates: 0.1, fat: 81 },
+  'cream': { protein: 2.8, carbohydrates: 3.3, fat: 38 },
+  'beef': { protein: 26, carbohydrates: 0, fat: 20 },
+  'pork': { protein: 25, carbohydrates: 0, fat: 14 },
+  'chicken': { protein: 31, carbohydrates: 0, fat: 3.6 },
+  'turkey': { protein: 29, carbohydrates: 0, fat: 1.2 },
+  'duck': { protein: 19, carbohydrates: 0, fat: 28 },
+  'lamb': { protein: 25, carbohydrates: 0, fat: 23 },
+  'venison': { protein: 30, carbohydrates: 0, fat: 2.5 },
+  'goat': { protein: 27, carbohydrates: 0, fat: 2.6 },
+  'rabbit': { protein: 21, carbohydrates: 0, fat: 8 },
+  'ham': { protein: 20, carbohydrates: 0, fat: 6 },
+  'bacon': { protein: 37, carbohydrates: 1, fat: 42 },
+  'sausage': { protein: 12, carbohydrates: 2, fat: 20 },
+  'salmon': { protein: 25, carbohydrates: 0, fat: 13 },
+  'tuna': { protein: 30, carbohydrates: 0, fat: 1 },
+  'cod': { protein: 18, carbohydrates: 0, fat: 0.7 },
+  'trout': { protein: 20, carbohydrates: 0, fat: 5 },
+  'mackerel': { protein: 19, carbohydrates: 0, fat: 13 },
+  'sardine': { protein: 25, carbohydrates: 0, fat: 11 },
+  'herring': { protein: 20, carbohydrates: 0, fat: 11 },
+  'octopus': { protein: 30, carbohydrates: 4, fat: 1 },
+  'squid': { protein: 16, carbohydrates: 3, fat: 1.4 },
+  'clam': { protein: 14, carbohydrates: 0, fat: 1 },
+  'mussel': { protein: 24, carbohydrates: 0, fat: 2 },
+  'shrimp': { protein: 24, carbohydrates: 0, fat: 0.3 },
+  'lobster': { protein: 19, carbohydrates: 0, fat: 1.3 },
+  'crab': { protein: 19, carbohydrates: 0, fat: 1 },
+  'cheddar': { protein: 25, carbohydrates: 1, fat: 33 },
+  'mozzarella': { protein: 28, carbohydrates: 3, fat: 22 },
+  'parmesan': { protein: 35, carbohydrates: 3, fat: 29 },
+  'feta': { protein: 14, carbohydrates: 4, fat: 21 },
+  'goat cheese': { protein: 22, carbohydrates: 0, fat: 27 },
+  'ricotta': { protein: 7, carbohydrates: 3, fat: 10 },
+  'cottage cheese': { protein: 11, carbohydrates: 3, fat: 4 },
+  'brie': { protein: 21, carbohydrates: 0, fat: 30 },
+  'camembert': { protein: 20, carbohydrates: 0, fat: 23 },
+  'gouda': { protein: 25, carbohydrates: 0, fat: 27 },
+  'emmental': { protein: 29, carbohydrates: 1, fat: 27 },
+  'asiago': { protein: 25, carbohydrates: 0, fat: 27 },
+  'ricotta salata': { protein: 25, carbohydrates: 1, fat: 22 },
+  'halloumi': { protein: 25, carbohydrates: 2, fat: 30 },
+  'blue cheese': { protein: 21, carbohydrates: 2, fat: 35 },
+  'cacao': { protein: 20, carbohydrates: 58, fat: 14 },
+  'chocolate': { protein: 7, carbohydrates: 59, fat: 30 },
+  'vanilla': { protein: 0, carbohydrates: 12, fat: 0 },
+  'honey': { protein: 0.3, carbohydrates: 82, fat: 0 },
+  'maple syrup': { protein: 0, carbohydrates: 67, fat: 0 },
+  'syrup': { protein: 0, carbohydrates: 77, fat: 0 },
+  'agave nectar': { protein: 0, carbohydrates: 75, fat: 0 },
+  'molasses': { protein: 0.5, carbohydrates: 75, fat: 0 },
+  'sorghum': { protein: 11, carbohydrates: 73, fat: 2.3 },
+  'quinoa': { protein: 14, carbohydrates: 64, fat: 6 },
+  'amaranth': { protein: 14, carbohydrates: 65, fat: 7 },
+  'millet': { protein: 11, carbohydrates: 73, fat: 4.2 },
+  'teff': { protein: 13, carbohydrates: 73, fat: 2.4 },
+  'buckwheat': { protein: 13, carbohydrates: 71, fat: 3.4 },
+  'farro': { protein: 14, carbohydrates: 69, fat: 2.5 },
+  'spelt': { protein: 15, carbohydrates: 70, fat: 2.5 },
+  'triticale': { protein: 12, carbohydrates: 73, fat: 1.7 },
+  'kamut': { protein: 15, carbohydrates: 65, fat: 2.8 },
+  'emmer': { protein: 15, carbohydrates: 69, fat: 2.5 },
+  'bulgur': { protein: 12, carbohydrates: 77, fat: 0.2 },
+  'couscous': { protein: 12, carbohydrates: 76, fat: 0.2 },
+  'polenta': { protein: 2.2, carbohydrates: 73, fat: 0.6 },
+  'grits': { protein: 2.6, carbohydrates: 73, fat: 0.7 },
+  'tapioca': { protein: 0.2, carbohydrates: 88, fat: 0.2 },
+  'arrowroot': { protein: 0.4, carbohydrates: 86, fat: 0.1 },
+  'xanthan gum': { protein: 0, carbohydrates: 79, fat: 0 },
+  'guar gum': { protein: 0, carbohydrates: 85, fat: 0 },
+  'pectin': { protein: 0, carbohydrates: 84, fat: 0 },
+  'agar': { protein: 0, carbohydrates: 80, fat: 0 },
+  'gelatin': { protein: 85, carbohydrates: 0, fat: 0 },
+  'pectin': { protein: 0, carbohydrates: 84, fat: 0 },
+  'yeast': { protein: 33, carbohydrates: 37, fat: 3 },
+  'baking powder': { protein: 0, carbohydrates: 50, fat: 0 },
+  'baking soda': { protein: 0, carbohydrates: 0, fat: 0 },
+  'cornstarch': { protein: 0.1, carbohydrates: 91, fat: 0.1 },
+  'potato starch': { protein: 0.1, carbohydrates: 89, fat: 0.1 },
+  'tapioca starch': { protein: 0.2, carbohydrates: 88, fat: 0.2 },
+  'wheat starch': { protein: 0.1, carbohydrates: 91, fat: 0.1 },
+  'cassava flour': { protein: 1.4, carbohydrates: 86, fat: 0.2 },
+  'chickpea flour': { protein: 22, carbohydrates: 60, fat: 6 },
+  'soybean oil': { protein: 0, carbohydrates: 0, fat: 100 },
+  'canola oil': { protein: 0, carbohydrates: 0, fat: 100 },
+  'olive oil': { protein: 0, carbohydrates: 0, fat: 100 },
+  'coconut oil': { protein: 0, carbohydrates: 0, fat: 100 },
+  'avocado oil': { protein: 0, carbohydrates: 0, fat: 100 },
+  'palm oil': { protein: 0, carbohydrates: 0, fat: 100 },
+  'sunflower oil': { protein: 0, carbohydrates: 0, fat: 100 },
+  'safflower oil': { protein: 0, carbohydrates: 0, fat: 100 },
+  'grapeseed oil': { protein: 0, carbohydrates: 0, fat: 100 },
+  'sesame oil': { protein: 0, carbohydrates: 0, fat: 100 },
+  'flaxseed oil': { protein: 0, carbohydrates: 0, fat: 100 },
+  'hemp oil': { protein: 0, carbohydrates: 0, fat: 100 },
+  'walnut oil': { protein: 0, carbohydrates: 0, fat: 100 },
+  'hazelnut oil': { protein: 0, carbohydrates: 0, fat: 100 },
+  'almond oil': { protein: 0, carbohydrates: 0, fat: 100 },
+  'pine nut oil': { protein: 0, carbohydrates: 0, fat: 100 },
+  'cinnamon': { protein: 4, carbohydrates: 81, fat: 1.2 },
+  'nutmeg': { protein: 5, carbohydrates: 49, fat: 36 },
+  'cloves': { protein: 6, carbohydrates: 65, fat: 20 },
+  'cardamom': { protein: 10, carbohydrates: 68, fat: 6 },
+  'ginger': { protein: 1.8, carbohydrates: 18, fat: 0.8 },
+  'turmeric': { protein: 8, carbohydrates: 65, fat: 3.3 },
+  'paprika': { protein: 14, carbohydrates: 54, fat: 12 },
+  'black pepper': { protein: 10, carbohydrates: 64, fat: 3.3 },
+  'white pepper': { protein: 10, carbohydrates: 64, fat: 3.5 },
+  'cayenne pepper': { protein: 9, carbohydrates: 64, fat: 6 },
+  'mustard seeds': { protein: 26, carbohydrates: 28, fat: 36 },
+  'fennel seeds': { protein: 15, carbohydrates: 60, fat: 10 },
+  'caraway seeds': { protein: 19, carbohydrates: 48, fat: 15 },
+  'coriander seeds': { protein: 12, carbohydrates: 55, fat: 17 },
+  'chia seeds': { protein: 17, carbohydrates: 42, fat: 31 },
+  'flaxseeds': { protein: 18, carbohydrates: 29, fat: 42 },
+  'hemp seeds': { protein: 33, carbohydrates: 9, fat: 49 },
+  'sunflower seeds': { protein: 21, carbohydrates: 20, fat: 51 },
+  'pumpkin seeds': { protein: 30, carbohydrates: 10, fat: 49 },
+  'sesame seeds': { protein: 18, carbohydrates: 23, fat: 50 },
+  'poppy seeds': { protein: 17, carbohydrates: 28, fat: 44 },
+  'nutritional yeast': { protein: 50, carbohydrates: 20, fat: 4 },
+  'spirulina': { protein: 57, carbohydrates: 23, fat: 7 },
+  'kelp': { protein: 1.5, carbohydrates: 5, fat: 0.3 },
+  'seaweed': { protein: 1.6, carbohydrates: 5, fat: 0.6 },
+  'miso': { protein: 11, carbohydrates: 14, fat: 5 },
+  'tamari': { protein: 6, carbohydrates: 1, fat: 0 },
+  'soy sauce': { protein: 8, carbohydrates: 1, fat: 0 },
+  'hoisin sauce': { protein: 2, carbohydrates: 25, fat: 0.5 },
+  'sriracha': { protein: 0.9, carbohydrates: 6, fat: 0.1 },
+  'barbecue sauce': { protein: 1, carbohydrates: 24, fat: 0.2 },
+  'ketchup': { protein: 1, carbohydrates: 24, fat: 0.2 },
+  'mayonnaise': { protein: 1, carbohydrates: 1, fat: 75 },
+  'ranch dressing': { protein: 0.8, carbohydrates: 2, fat: 69 },
+  'italian dressing': { protein: 0, carbohydrates: 3, fat: 12 },
+  'balsamic vinegar': { protein: 0, carbohydrates: 17, fat: 0 },
+  'apple cider vinegar': { protein: 0, carbohydrates: 0, fat: 0 },
+  'red wine vinegar': { protein: 0, carbohydrates: 0, fat: 0 },
+  'white wine vinegar': { protein: 0, carbohydrates: 0, fat: 0 },
+  'rice vinegar': { protein: 0, carbohydrates: 0, fat: 0 },
+  'distilled vinegar': { protein: 0, carbohydrates: 0, fat: 0 },
+  'sugar': { protein: 0, carbohydrates: 100, fat: 0 },
+  'brown sugar': { protein: 0, carbohydrates: 97, fat: 0 },
+  'powdered sugar': { protein: 0, carbohydrates: 100, fat: 0 },
+  'coconut sugar': { protein: 0, carbohydrates: 75, fat: 0 },
+  'agave syrup': { protein: 0, carbohydrates: 75, fat: 0 },
+  'honey': { protein: 0.3, carbohydrates: 82, fat: 0 },
+  'maple syrup': { protein: 0, carbohydrates: 67, fat: 0 },
+  'molasses': { protein: 0.5, carbohydrates: 75, fat: 0 },
+  'corn syrup': { protein: 0, carbohydrates: 82, fat: 0 },
+  'high fructose corn syrup': { protein: 0, carbohydrates: 77, fat: 0 },
+  'malt syrup': { protein: 0, carbohydrates: 85, fat: 0 },
+  'sweetened condensed milk': { protein: 7, carbohydrates: 54, fat: 8 },
+  'evaporated milk': { protein: 7.5, carbohydrates: 11, fat: 7 },
+  'skim milk': { protein: 3.4, carbohydrates: 5, fat: 0.1 },
+  'whole milk': { protein: 3.4, carbohydrates: 4.8, fat: 3.6 },
+  'half and half': { protein: 3.2, carbohydrates: 4.4, fat: 10.5 },
+  'heavy cream': { protein: 2.8, carbohydrates: 3.3, fat: 38 },
+  'buttermilk': { protein: 3, carbohydrates: 4.5, fat: 1.5 },
+  'yogurt': { protein: 3.5, carbohydrates: 4.7, fat: 3.3 },
+  'Greek yogurt': { protein: 10, carbohydrates: 4, fat: 0.8 },
+  'kefir': { protein: 3, carbohydrates: 4, fat: 1 },
+  'butter': { protein: 0.9, carbohydrates: 0.1, fat: 81 },
+  'margarine': { protein: 0, carbohydrates: 0, fat: 80 },
+  'shortening': { protein: 0, carbohydrates: 0, fat: 100 },
+  'lard': { protein: 0, carbohydrates: 0, fat: 100 },
+  'tallow': { protein: 0, carbohydrates: 0, fat: 100 },
+  'duck fat': { protein: 0, carbohydrates: 0, fat: 100 },
+  'beef tallow': { protein: 0, carbohydrates: 0, fat: 100 },
+  'coconut milk': { protein: 2, carbohydrates: 6, fat: 24 },
+  'almond milk': { protein: 1, carbohydrates: 0, fat: 2.5 },
+  'soy milk': { protein: 3, carbohydrates: 2, fat: 1.5 },
+  'rice milk': { protein: 1, carbohydrates: 10, fat: 1 },
+  'oat milk': { protein: 1, carbohydrates: 16, fat: 1.5 },
+  'cashew milk': { protein: 1, carbohydrates: 1, fat: 2 },
+  'hemp milk': { protein: 1, carbohydrates: 0, fat: 3 },
+  'flax milk': { protein: 1, carbohydrates: 0, fat: 1 },
+  'coconut water': { protein: 0.1, carbohydrates: 9, fat: 0.2 },
+  'aloe vera juice': { protein: 0, carbohydrates: 1, fat: 0 },
+  'fruit juice': { protein: 0, carbohydrates: 10, fat: 0 },
+  'carbonated water': { protein: 0, carbohydrates: 0, fat: 0 },
+  'sparkling water': { protein: 0, carbohydrates: 0, fat: 0 },
+  'tea': { protein: 0, carbohydrates: 0, fat: 0 },
+  'coffee': { protein: 0, carbohydrates: 0, fat: 0 },
+  'herbal tea': { protein: 0, carbohydrates: 0, fat: 0 },
+  'beer': { protein: 0.5, carbohydrates: 3.6, fat: 0 },
+  'wine': { protein: 0, carbohydrates: 1, fat: 0 },
+  'spirits': { protein: 0, carbohydrates: 0, fat: 0 },
+  'liquor': { protein: 0, carbohydrates: 0, fat: 0 },
+  'whiskey': { protein: 0, carbohydrates: 0, fat: 0 },
+  'vodka': { protein: 0, carbohydrates: 0, fat: 0 },
+  'gin': { protein: 0, carbohydrates: 0, fat: 0 },
+  'rum': { protein: 0, carbohydrates: 0, fat: 0 },
+  'tequila': { protein: 0, carbohydrates: 0, fat: 0 },
+  'brandy': { protein: 0, carbohydrates: 0, fat: 0 },
+  'cognac': { protein: 0, carbohydrates: 0, fat: 0 },
+  'liqueur': { protein: 0, carbohydrates: 0, fat: 0 },
+  'sparkling wine': { protein: 0, carbohydrates: 1, fat: 0 },
+  'champagne': { protein: 0, carbohydrates: 1, fat: 0 },
+  'cider': { protein: 0, carbohydrates: 5, fat: 0 },
+  'malt liquor': { protein: 0, carbohydrates: 6, fat: 0 },
+  'energy drink': { protein: 0, carbohydrates: 12, fat: 0 },
+  'sports drink': { protein: 0, carbohydrates: 7, fat: 0 },
+  'protein shake': { protein: 20, carbohydrates: 4, fat: 2 },
+  'meal replacement': { protein: 20, carbohydrates: 30, fat: 5 },
+  'soda': { protein: 0, carbohydrates: 39, fat: 0 },
+  'lemonade': { protein: 0, carbohydrates: 23, fat: 0 },
+  'limeade': { protein: 0, carbohydrates: 22, fat: 0 },
+  'coffee creamer': { protein: 0, carbohydrates: 6, fat: 3 },
+  'whipped cream': { protein: 0.3, carbohydrates: 5, fat: 30 },
+  'ice cream': { protein: 3, carbohydrates: 25, fat: 7 },
+  'frozen yogurt': { protein: 4, carbohydrates: 24, fat: 1 },
+  'sorbet': { protein: 0, carbohydrates: 35, fat: 0 },
+  'gelato': { protein: 4, carbohydrates: 30, fat: 8 },
+  'pudding': { protein: 2, carbohydrates: 23, fat: 3 },
+  'custard': { protein: 5, carbohydrates: 15, fat: 7 },
+  'cheesecake': { protein: 8, carbohydrates: 24, fat: 16 },
+  'muffin': { protein: 4, carbohydrates: 46, fat: 12 },
+  'cookie': { protein: 2, carbohydrates: 60, fat: 10 },
+  'cake': { protein: 4, carbohydrates: 52, fat: 18 },
+  'pie': { protein: 3, carbohydrates: 50, fat: 20 },
+  'brownie': { protein: 3, carbohydrates: 55, fat: 25 },
+  'cupcake': { protein: 3, carbohydrates: 48, fat: 15 },
+  'doughnut': { protein: 3, carbohydrates: 50, fat: 20 },
+  'croissant': { protein: 8, carbohydrates: 50, fat: 23 },
+  'brioche': { protein: 9, carbohydrates: 50, fat: 15 },
+  'bagel': { protein: 10, carbohydrates: 55, fat: 2 },
+  'tart': { protein: 4, carbohydrates: 45, fat: 25 },
+  'scone': { protein: 6, carbohydrates: 50, fat: 15 },
+  'crumble': { protein: 2, carbohydrates: 60, fat: 20 },
+  'bar': { protein: 6, carbohydrates: 35, fat: 10 },
+  'cheeseburger': { protein: 20, carbohydrates: 32, fat: 25 },
+  'hotdog': { protein: 10, carbohydrates: 2, fat: 20 },
+  'pizza': { protein: 12, carbohydrates: 36, fat: 14 },
+  'pasta salad': { protein: 7, carbohydrates: 40, fat: 10 },
+  'potato salad': { protein: 3, carbohydrates: 35, fat: 8 },
+  'coleslaw': { protein: 1, carbohydrates: 7, fat: 8 },
+  'caesar salad': { protein: 5, carbohydrates: 7, fat: 12 },
+  'garden salad': { protein: 2, carbohydrates: 6, fat: 2 },
+  'fruit salad': { protein: 1, carbohydrates: 14, fat: 0 },
+  'roast chicken': { protein: 25, carbohydrates: 0, fat: 15 },
+  'roast beef': { protein: 26, carbohydrates: 0, fat: 15 },
+  'grilled salmon': { protein: 20, carbohydrates: 0, fat: 13 },
+  'grilled shrimp': { protein: 24, carbohydrates: 0, fat: 1 },
+  'tofu': { protein: 8, carbohydrates: 1.9, fat: 4.8 },
+  'tempeh': { protein: 19, carbohydrates: 9.4, fat: 7.6 },
+  'seitan': { protein: 75, carbohydrates: 14, fat: 1.6 },
+  'chicken breast': { protein: 31, carbohydrates: 0, fat: 3.6 },
+  'beef steak': { protein: 26, carbohydrates: 0, fat: 19 },
+  'pork chop': { protein: 25, carbohydrates: 0, fat: 20 },
+  'salmon fillet': { protein: 20, carbohydrates: 0, fat: 13 },
+  'cod fillet': { protein: 18, carbohydrates: 0, fat: 0.7 },
+  'tilapia': { protein: 26, carbohydrates: 0, fat: 1.8 },
+  'haddock': { protein: 20, carbohydrates: 0, fat: 0.6 },
+  'mackerel': { protein: 20, carbohydrates: 0, fat: 13 },
+  'tuna': { protein: 30, carbohydrates: 0, fat: 0.7 },
+  'egg': { protein: 13, carbohydrates: 1.1, fat: 11 },
+  'egg white': { protein: 11, carbohydrates: 0.7, fat: 0.2 },
+  'egg yolk': { protein: 16, carbohydrates: 0.6, fat: 27 },
+  'cheddar cheese': { protein: 25, carbohydrates: 1.3, fat: 33 },
+  'mozzarella cheese': { protein: 22, carbohydrates: 3.1, fat: 22 },
+  'cream cheese': { protein: 6, carbohydrates: 3.3, fat: 33 },
+  'feta cheese': { protein: 14, carbohydrates: 4, fat: 21 },
+  'parmesan cheese': { protein: 35, carbohydrates: 3.2, fat: 29 },
+  'blue cheese': { protein: 21, carbohydrates: 2, fat: 31 },
+  'brie cheese': { protein: 21, carbohydrates: 0.1, fat: 25 },
+  'cottage cheese': { protein: 11, carbohydrates: 3.4, fat: 4.3 },
+  'ricotta cheese': { protein: 7, carbohydrates: 3.6, fat: 9 },
+  'buttermilk cheese': { protein: 14, carbohydrates: 0, fat: 30 },
+  'cream cheese': { protein: 6, carbohydrates: 3.3, fat: 33 },
+  'skyr': { protein: 11, carbohydrates: 3.3, fat: 0.2 },
+  'quark': { protein: 11, carbohydrates: 3.3, fat: 10 },
+  'kefir cheese': { protein: 16, carbohydrates: 3, fat: 12 },
+  'gouda cheese': { protein: 25, carbohydrates: 2.2, fat: 27 },
+  'swiss cheese': { protein: 27, carbohydrates: 3.4, fat: 26 },
+  'monterey jack cheese': { protein: 25, carbohydrates: 2.8, fat: 27 },
+  'gruyere cheese': { protein: 29, carbohydrates: 0, fat: 32 },
+  'provolone cheese': { protein: 26, carbohydrates: 2.5, fat: 27 },
+  'cotija cheese': { protein: 21, carbohydrates: 2.7, fat: 16 },
+  'queso fresco': { protein: 21, carbohydrates: 2.5, fat: 12 },
+  'camembert cheese': { protein: 19, carbohydrates: 0.5, fat: 23 },
+  'marscapone cheese': { protein: 4, carbohydrates: 3.5, fat: 39 },
+  'cream cheese': { protein: 6, carbohydrates: 3.3, fat: 33 },
+  'gorgonzola cheese': { protein: 21, carbohydrates: 2.7, fat: 31 },
+  'roquefort cheese': { protein: 20, carbohydrates: 4.1, fat: 32 },
+  'stinking bishop cheese': { protein: 22, carbohydrates: 2.3, fat: 27 },
+  'cheddar cheese': { protein: 25, carbohydrates: 1.3, fat: 33 },
+  'kalamata olives': { protein: 0.8, carbohydrates: 2.4, fat: 11 },
+  'green olives': { protein: 0.8, carbohydrates: 3.8, fat: 10 },
+  'black olives': { protein: 0.6, carbohydrates: 3.8, fat: 10 },
+  'black beans': { protein: 8, carbohydrates: 23, fat: 0.5 },
+  'kidney beans': { protein: 8, carbohydrates: 22, fat: 0.5 },
+  'pinto beans': { protein: 9, carbohydrates: 27, fat: 0.8 },
+  'chickpeas': { protein: 9, carbohydrates: 27, fat: 2.6 },
+  'lentils': { protein: 9, carbohydrates: 20, fat: 0.4 },
+  'navy beans': { protein: 8, carbohydrates: 22, fat: 0.5 },
+  'great northern beans': { protein: 9, carbohydrates: 22, fat: 0.5 },
+  'mung beans': { protein: 7, carbohydrates: 19, fat: 0.2 },
+  'aduki beans': { protein: 7, carbohydrates: 20, fat: 0.5 },
+  'green peas': { protein: 5, carbohydrates: 14, fat: 0.5 },
+  'edamame': { protein: 11, carbohydrates: 8, fat: 5 },
+  'seaweed': { protein: 1.6, carbohydrates: 5, fat: 0.6 },
+  'kelp': { protein: 1.5, carbohydrates: 5, fat: 0.3 },
+  'miso': { protein: 11, carbohydrates: 14, fat: 5 },
+  'tamari': { protein: 6, carbohydrates: 1, fat: 0 },
+  'soy sauce': { protein: 8, carbohydrates: 1, fat: 0 },
+  'hoisin sauce': { protein: 2, carbohydrates: 25, fat: 0.5 },
+  'sriracha': { protein: 0.9, carbohydrates: 6, fat: 0.1 },
+  'barbecue sauce': { protein: 1, carbohydrates: 24, fat: 0.2 },
+  'ketchup': { protein: 1, carbohydrates: 24, fat: 0.2 },
+  'mayonnaise': { protein: 1, carbohydrates: 1, fat: 75 },
+  'ranch dressing': { protein: 0.8, carbohydrates: 2, fat: 69 },
+  'italian dressing': { protein: 0, carbohydrates: 3, fat: 12 },
+  'balsamic vinegar': { protein: 0, carbohydrates: 17, fat: 0 },
+  'apple cider vinegar': { protein: 0, carbohydrates: 0, fat: 0 },
+  'red wine vinegar': { protein: 0, carbohydrates: 0, fat: 0 },
+  'white wine vinegar': { protein: 0, carbohydrates: 0, fat: 0 },
+  'rice vinegar': { protein: 0, carbohydrates: 0, fat: 0 },
+  'distilled vinegar': { protein: 0, carbohydrates: 0, fat: 0 },
+  'sugar': { protein: 0, carbohydrates: 100, fat: 0 },
+  'brown sugar': { protein: 0, carbohydrates: 97, fat: 0 },
+  'powdered sugar': { protein: 0, carbohydrates: 100, fat: 0 },
+  'coconut sugar': { protein: 0, carbohydrates: 75, fat: 0 },
+  'agave syrup': { protein: 0, carbohydrates: 75, fat: 0 },
+  'honey': { protein: 0.3, carbohydrates: 82, fat: 0 },
+  'maple syrup': { protein: 0, carbohydrates: 67, fat: 0 },
+  'molasses': { protein: 0.5, carbohydrates: 75, fat: 0 },
+  'corn syrup': { protein: 0, carbohydrates: 82, fat: 0 },
+  'high fructose corn syrup': { protein: 0, carbohydrates: 77, fat: 0 },
+  'malt syrup': { protein: 0, carbohydrates: 85, fat: 0 },
+  'sweetened condensed milk': { protein: 7, carbohydrates: 54, fat: 8 },
+  'evaporated milk': { protein: 7.5, carbohydrates: 11, fat: 7 },
+  'skim milk': { protein: 3.4, carbohydrates: 5, fat: 0.1 },
+  'whole milk': { protein: 3.4, carbohydrates: 4.8, fat: 3.6 },
+  'half and half': { protein: 3.2, carbohydrates: 4.4, fat: 10.5 },
+  'heavy cream': { protein: 2.8, carbohydrates: 3.3, fat: 38 },
+  'buttermilk': { protein: 3, carbohydrates: 4.5, fat: 1.5 },
+  'yogurt': { protein: 3.5, carbohydrates: 4.7, fat: 3.3 },
+  'Greek yogurt': { protein: 10, carbohydrates: 4, fat: 0.8 },
+  'kefir': { protein: 3, carbohydrates: 4, fat: 1 },
+  'butter': { protein: 0.9, carbohydrates: 0.1, fat: 81 },
+  'margarine': { protein: 0, carbohydrates: 0, fat: 80 },
+  'shortening': { protein: 0, carbohydrates: 0, fat: 100 },
+  'lard': { protein: 0, carbohydrates: 0, fat: 100 },
+  'tallow': { protein: 0, carbohydrates: 0, fat: 100 },
+  'duck fat': { protein: 0, carbohydrates: 0, fat: 100 },
+  'beef tallow': { protein: 0, carbohydrates: 0, fat: 100 },
+  'coconut milk': { protein: 2, carbohydrates: 6, fat: 24 },
+  'almond milk': { protein: 1, carbohydrates: 0, fat: 2.5 },
+  'soy milk': { protein: 3, carbohydrates: 2, fat: 1.5 },
+  'rice milk': { protein: 1, carbohydrates: 10, fat: 1 },
+  'oat milk': { protein: 1, carbohydrates: 16, fat: 1.5 },
+  'cashew milk': { protein: 1, carbohydrates: 1, fat: 2 },
+  'hemp milk': { protein: 1, carbohydrates: 0, fat: 3 },
+  'flax milk': { protein: 1, carbohydrates: 0, fat: 1 },
+  'coconut water': { protein: 0.1, carbohydrates: 9, fat: 0.2 },
+  'aloe vera juice': { protein: 0, carbohydrates: 1, fat: 0 },
+  'fruit juice': { protein: 0, carbohydrates: 10, fat: 0 },
+  'carbonated water': { protein: 0, carbohydrates: 0, fat: 0 },
+  'sparkling water': { protein: 0, carbohydrates: 0, fat: 0 },
+  'tea': { protein: 0, carbohydrates: 0, fat: 0 },
+  'coffee': { protein: 0, carbohydrates: 0, fat: 0 },
+  'herbal tea': { protein: 0, carbohydrates: 0, fat: 0 },
+  'beer': { protein: 0.5, carbohydrates: 3.6, fat: 0 },
+  'wine': { protein: 0, carbohydrates: 1, fat: 0 },
+  'spirits': { protein: 0, carbohydrates: 0, fat: 0 },
+  'liquor': { protein: 0, carbohydrates: 0, fat: 0 },
+  'whiskey': { protein: 0, carbohydrates: 0, fat: 0 },
+  'vodka': { protein: 0, carbohydrates: 0, fat: 0 },
+  'gin': { protein: 0, carbohydrates: 0, fat: 0 },
+  'rum': { protein: 0, carbohydrates: 0, fat: 0 },
+  'tequila': { protein: 0, carbohydrates: 0, fat: 0 },
+  'brandy': { protein: 0, carbohydrates: 0, fat: 0 },
+  'cognac': { protein: 0, carbohydrates: 0, fat: 0 },
+  'liqueur': { protein: 0, carbohydrates: 0, fat: 0 },
+  'sparkling wine': { protein: 0, carbohydrates: 1, fat: 0 },
+  'champagne': { protein: 0, carbohydrates: 1, fat: 0 },
+  'cider': { protein: 0, carbohydrates: 5, fat: 0 },
+  'malt liquor': { protein: 0, carbohydrates: 6, fat: 0 },
+  'energy drink': { protein: 0, carbohydrates: 12, fat: 0 },
+  'sports drink': { protein: 0, carbohydrates: 7, fat: 0 },
+  'protein shake': { protein: 20, carbohydrates: 4, fat: 2 },
+  'meal replacement': { protein: 20, carbohydrates: 30, fat: 5 },
+  'soda': { protein: 0, carbohydrates: 39, fat: 0 },
+  'lemonade': { protein: 0, carbohydrates: 23, fat: 0 },
+  'limeade': { protein: 0, carbohydrates: 22, fat: 0 },
+  'coffee creamer': { protein: 0, carbohydrates: 6, fat: 3 },
+  'whipped cream': { protein: 0.3, carbohydrates: 5, fat: 30 },
+  'ice cream': { protein: 3, carbohydrates: 25, fat: 7 },
+  'frozen yogurt': { protein: 4, carbohydrates: 24, fat: 1 },
+  'sorbet': { protein: 0, carbohydrates: 35, fat: 0 },
+  'gelato': { protein: 4, carbohydrates: 30, fat: 8 },
+  'pudding': { protein: 2, carbohydrates: 23, fat: 3 },
+  'custard': { protein: 5, carbohydrates: 15, fat: 7 },
+  'cheesecake': { protein: 8, carbohydrates: 24, fat: 16 },
+  'muffin': { protein: 4, carbohydrates: 46, fat: 12 },
+  'cookie': { protein: 2, carbohydrates: 60, fat: 10 },
+  'cake': { protein: 4, carbohydrates: 52, fat: 18 },
+  'pie': { protein: 3, carbohydrates: 50, fat: 20 },
+  'brownie': { protein: 3, carbohydrates: 55, fat: 25 },
+  'cupcake': { protein: 3, carbohydrates: 48, fat: 15 },
+  'doughnut': { protein: 3, carbohydrates: 50, fat: 20 },
+  'croissant': { protein: 8, carbohydrates: 50, fat: 23 },
+  'brioche': { protein: 9, carbohydrates: 50, fat: 15 },
+  'bagel': { protein: 10, carbohydrates: 55, fat: 2 },
+  'tart': { protein: 4, carbohydrates: 45, fat: 25 },
+  'scone': { protein: 6, carbohydrates: 50, fat: 15 },
+  'crumble': { protein: 2, carbohydrates: 60, fat: 20 },
+  'bar': { protein: 6, carbohydrates: 35, fat: 10 },
+  'cheeseburger': { protein: 20, carbohydrates: 32, fat: 25 },
+  'hotdog': { protein: 10, carbohydrates: 2, fat: 20 },
+  'pizza': { protein: 12, carbohydrates: 36, fat: 14 },
+  'pasta salad': { protein: 7, carbohydrates: 40, fat: 10 },
+  'potato salad': { protein: 3, carbohydrates: 35, fat: 8 },
+  'coleslaw': { protein: 1, carbohydrates: 7, fat: 8 },
+  'caesar salad': { protein: 5, carbohydrates: 7, fat: 12 },
+  'garden salad': { protein: 2, carbohydrates: 6, fat: 2 },
+  'fruit salad': { protein: 1, carbohydrates: 14, fat: 0 },
+  'roast chicken': { protein: 25, carbohydrates: 0, fat: 15 },
+  'roast beef': { protein: 26, carbohydrates: 0, fat: 15 },
+  'grilled salmon': { protein: 20, carbohydrates: 0, fat: 13 },
+  'grilled shrimp': { protein: 24, carbohydrates: 0, fat: 1 },
+  'tofu': { protein: 8, carbohydrates: 1.9, fat: 4.8 },
+  'tempeh': { protein: 19, carbohydrates: 9.4, fat: 7.6 },
+  'seitan': { protein: 75, carbohydrates: 14, fat: 1.6 },
+  'chicken breast': { protein: 31, carbohydrates: 0, fat: 3.6 },
+  'beef steak': { protein: 26, carbohydrates: 0, fat: 19 },
+  'pork chop': { protein: 25, carbohydrates: 0, fat: 20 },
+  'salmon fillet': { protein: 20, carbohydrates: 0, fat: 13 },
+  'cod fillet': { protein: 18, carbohydrates: 0, fat: 0.7 },
+  'tilapia': { protein: 26, carbohydrates: 0, fat: 1.8 },
+  'haddock': { protein: 20, carbohydrates: 0, fat: 0.6 },
+  'mackerel': { protein: 20, carbohydrates: 0, fat: 13 },
+  'tuna': { protein: 30, carbohydrates: 0, fat: 0.7 },
+  'egg': { protein: 13, carbohydrates: 1.1, fat: 11 },
+  'egg white': { protein: 11, carbohydrates: 0.7, fat: 0.2 },
+  'egg yolk': { protein: 16, carbohydrates: 0.6, fat: 27 },
+  'cheddar cheese': { protein: 25, carbohydrates: 1.3, fat: 33 },
+  'mozzarella cheese': { protein: 22, carbohydrates: 3.1, fat: 22 },
+  'cream cheese': { protein: 6, carbohydrates: 3.3, fat: 33 },
+  'feta cheese': { protein: 14, carbohydrates: 4, fat: 21 },
+  'parmesan cheese': { protein: 35, carbohydrates: 3.2, fat: 29 },
+  'blue cheese': { protein: 21, carbohydrates: 2, fat: 31 },
+  'brie cheese': { protein: 21, carbohydrates: 0.1, fat: 25 },
+  'cottage cheese': { protein: 11, carbohydrates: 3.4, fat: 4.3 },
+  'ricotta cheese': { protein: 7, carbohydrates: 3.6, fat: 9 },
+  'buttermilk cheese': { protein: 14, carbohydrates: 0, fat: 30 },
+  'skyr': { protein: 11, carbohydrates: 3.3, fat: 0.2 },
+  'quark': { protein: 11, carbohydrates: 3.3, fat: 10 },
+  'kefir cheese': { protein: 16, carbohydrates: 3, fat: 12 },
+  'gouda cheese': { protein: 25, carbohydrates: 2.2, fat: 27 },
+  'swiss cheese': { protein: 27, carbohydrates: 3.4, fat: 26 },
+  'monterey jack cheese': { protein: 25, carbohydrates: 2.8, fat: 27 },
+  'gruyere cheese': { protein: 29, carbohydrates: 0, fat: 32 },
+  'provolone cheese': { protein: 26, carbohydrates: 2.5, fat: 27 },
+  'cotija cheese': { protein: 21, carbohydrates: 2.7, fat: 16 },
+  'queso fresco': { protein: 21, carbohydrates: 2.5, fat: 12 },
+  'camembert cheese': { protein: 19, carbohydrates: 0.5, fat: 23 },
+  'marscapone cheese': { protein: 4, carbohydrates: 3.5, fat: 39 },
+  'gorgonzola cheese': { protein: 21, carbohydrates: 2.7, fat: 31 },
+  'roquefort cheese': { protein: 20, carbohydrates: 4.1, fat: 32 },
+  'stinking bishop cheese': { protein: 22, carbohydrates: 2.3, fat: 27 },
+  'kalamata olives': { protein: 0.8, carbohydrates: 2.4, fat: 11 },
+  'green olives': { protein: 0.8, carbohydrates: 3.8, fat: 10 },
+  'black olives': { protein: 0.6, carbohydrates: 3.8, fat: 10 },
+  'black beans': { protein: 8, carbohydrates: 23, fat: 0.5 },
+  'kidney beans': { protein: 8, carbohydrates: 22, fat: 0.5 },
+  'pinto beans': { protein: 9, carbohydrates: 27, fat: 0.8 },
+  'chickpeas': { protein: 9, carbohydrates: 27, fat: 2.6 },
+  'lentils': { protein: 9, carbohydrates: 20, fat: 0.4 },
+  'navy beans': { protein: 8, carbohydrates: 22, fat: 0.5 },
+  'great northern beans': { protein: 9, carbohydrates: 22, fat: 0.5 },
+  'mung beans': { protein: 7, carbohydrates: 19, fat: 0.2 },
+  'aduki beans': { protein: 7, carbohydrates: 20, fat: 0.5 },
+  'green peas': { protein: 5, carbohydrates: 14, fat: 0.5 },
+  'edamame': { protein: 11, carbohydrates: 8, fat: 5 },
+  'seaweed': { protein: 1.6, carbohydrates: 5, fat: 0.6 },
+  'kelp': { protein: 1.5, carbohydrates: 5, fat: 0.3 },
+  'miso': { protein: 11, carbohydrates: 14, fat: 5 },
+  'tamari': { protein: 6, carbohydrates: 1, fat: 0 },
+  'soy sauce': { protein: 8, carbohydrates: 1, fat: 0 },
+  'hoisin sauce': { protein: 2, carbohydrates: 25, fat: 0.5 },
+  'sriracha': { protein: 0.9, carbohydrates: 6, fat: 0.1 },
+  'barbecue sauce': { protein: 1, carbohydrates: 24, fat: 0.2 },
+  'ketchup': { protein: 1, carbohydrates: 24, fat: 0.2 },
+  'mayonnaise': { protein: 1, carbohydrates: 1, fat: 75 },
+  'ranch dressing': { protein: 0.8, carbohydrates: 2, fat: 69 },
+  'italian dressing': { protein: 0, carbohydrates: 3, fat: 12 },
+  'balsamic vinegar': { protein: 0, carbohydrates: 17, fat: 0 },
+  'apple cider vinegar': { protein: 0, carbohydrates: 0, fat: 0 },
+  'red wine vinegar': { protein: 0, carbohydrates: 0, fat: 0 },
+  'white wine vinegar': { protein: 0, carbohydrates: 0, fat: 0 },
+  'rice vinegar': { protein: 0, carbohydrates: 0, fat: 0 },
+  'distilled vinegar': { protein: 0, carbohydrates: 0, fat: 0 },
+  'sugar': { protein: 0, carbohydrates: 100, fat: 0 },
+  'brown sugar': { protein: 0, carbohydrates: 97, fat: 0 },
+  'powdered sugar': { protein: 0, carbohydrates: 100, fat: 0 },
+  'coconut sugar': { protein: 0, carbohydrates: 75, fat: 0 },
+  'agave syrup': { protein: 0, carbohydrates: 75, fat: 0 },
+  'honey': { protein: 0.3, carbohydrates: 82, fat: 0 },
+  'maple syrup': { protein: 0, carbohydrates: 67, fat: 0 },
+  'molasses': { protein: 0.5, carbohydrates: 75, fat: 0 },
+  'corn syrup': { protein: 0, carbohydrates: 82, fat: 0 },
+  'high fructose corn syrup': { protein: 0, carbohydrates: 77, fat: 0 },
+  'malt syrup': { protein: 0, carbohydrates: 85, fat: 0 },
+  'sweetened condensed milk': { protein: 7, carbohydrates: 54, fat: 8 },
+  'evaporated milk': { protein: 7.5, carbohydrates: 11, fat: 7 },
+ 
+
+      // Add more ingredients here
+    };
+
+    function getMacronutrients() {
+      const ingredient = document.getElementById('ingredient-form01-z').value.toLowerCase();
+      const resultsDiv = document.getElementById('results');
+
+      if (ingredient) {
+        const data = macronutrientDatabase[ingredient];
+        if (data) {
+          resultsDiv.innerHTML = `<p>Ingredient: ${ingredient}</p>
+                                  <p>Protein: ${data.protein}g</p>
+                                  <p>Carbohydrates: ${data.carbohydrates}g</p>
+                                  <p>Fat: ${data.fat}g</p>`;
+        } else {
+          resultsDiv.innerHTML = `<p>No data found for ${ingredient}.</p>`;
+        }
+      } else {
+        resultsDiv.innerHTML = `<p>Please enter an ingredient.</p>`;
+      }
+    }
+  </script>
+</body>
+</html>

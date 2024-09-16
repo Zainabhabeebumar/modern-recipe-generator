@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Site made with Mobirise Website Builder v5.9.18, https://mobirise.com -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Mobirise v5.9.18, mobirise.com">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <link rel="shortcut icon" href="assets/images/logo.png" type="image/x-icon">
+  <meta name="description" content="">
+  <title>Meal Planning</title>
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-reboot.min.css">
+  <link rel="stylesheet" href="assets/animatecss/animate.css">
+  <link rel="stylesheet" href="assets/dropdown/css/style.css">
+  <link rel="stylesheet" href="assets/socicon/css/styles.css">
+  <link rel="stylesheet" href="assets/theme/css/style.css">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;700&display=swap&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;700&display=swap&display=swap"></noscript>
+  <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css?v=WdWx5r">
+  <link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css?v=WdWx5r" type="text/css">
+  
+  <style>
+     .meal-card {
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      margin-bottom: 20px;
+      font-family: 'Inter Tight', sans-serif;
+    }
+
+    .meal-card h3 {
+      margin-top: 0;
+    }
+
+    .meal-card p {
+      margin: 10px 0;
+    }
+
+    .meal-card button {
+      background-color: #e91e63; /* Rose color */
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .meal-card button:hover {
+      background-color: #d81b60; /* Darker rose color for hover effect */
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .container {
+      margin-top: 20px;
+    }
+
+    #meal-plan-container {
+      margin-top: 20px;
+    }
+  </style>
+  
+</head>
+<body>
+
+  <section data-bs-version="5.1" class="menu menu1 cid-uoxoDND23i" once="menu" id="menu1-11">
+    <nav class="navbar navbar-dropdown navbar-fixed-top navbar-expand-lg">
+      <div class="container">
+        <div class="navbar-brand">
+          <span class="navbar-caption-wrap"><a class="navbar-caption text-white text-primary display-4">Modern Recipe Generator</a></span>
+        </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbarSupportedContent" data-bs-target="#navbarSupportedContent" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav nav-dropdown nav-right" data-app-modern-menu="true">
+            <li class="nav-item"><a class="nav-link link text-white text-primary display-4" href="index.html#header09-4">Home&nbsp;</a></li>
+            <li class="nav-item"><a class="nav-link link text-white text-primary display-4" href="page6.html#features03-r">Features&nbsp;</a></li>
+            <li class="nav-item"><a class="nav-link link text-white text-primary display-4" href="page2.html#list01-d">About us</a></li>
+            <li class="nav-item"><a class="nav-link link text-white text-primary display-4" href="page1.html#form03-9">Contact</a></li>
+          </ul>
+          <div class="icons-menu">
+            <a class="iconfont-wrapper" href="https://mobiri.se" target="_blank">
+              <span class="p-2 mbr-iconfont socicon-facebook socicon" style="font-size: 20px; color: rgb(255, 255, 255); fill: rgb(255, 255, 255);"></span>
+            </a>
+            <a class="iconfont-wrapper" href="https://mobiri.se" target="_blank">
+              <span class="p-2 mbr-iconfont socicon-twitter socicon" style="font-size: 20px; color: rgb(255, 255, 255); fill: rgb(255, 255, 255);"></span>
+            </a>
+            <a class="iconfont-wrapper" href="https://mobiri.se" target="_blank">
+              <span class="p-2 mbr-iconfont socicon-instagram socicon" style="font-size: 20px; color: rgb(255, 255, 255); fill: rgb(255, 255, 255);"></span>
+            </a>
+            <a class="iconfont-wrapper" href="https://mobiri.se" target="_blank">
+              <span class="p-2 mbr-iconfont socicon-linkedin socicon" style="font-size: 20px; color: rgb(255, 255, 255); fill: rgb(255, 255, 255);"></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </section>
+
+  <section data-bs-version="5.1" class="form1 cid-uoxoDPdeoY mbr-fullscreen" id="form01-12">
+    <div class="container">
+      <div class="row content-wrapper justify-content-center">
+        <div class="col-lg-7 mbr-form">
+          <div class="col-lg-12 col-md-12 col-sm-12">
+            <h5 class="mbr-section-title mbr-fonts-style mb-5 display-2"><strong>Generates Meal Plans based on dietary needs and preferences.</strong></h5>
+          </div>
+          <div class="text-wrapper align-left">
+            <!-- Form for dietary needs -->
+            <form id="meal-plan-form" class="mbr-form form-with-styler" data-verified="">
+              <div class="row">
+                <div hidden="hidden" data-form-alert-danger="" class="alert alert-danger col-12">
+                  Oops...! some problem!
+                </div>
+              </div>
+              <div class="dragArea row">
+                <div class="col-lg-6 col-md-6 col-sm-12 form-group">
+                  <select name="diet" id="diet-select" class="form-control display-7">
+                    <option value="">Select dietary needs</option>
+                    <option value="Vegetarian">Vegetarian</option>
+                    <option value="Vegan">Vegan</option>
+                    <option value="Non-Vegetarian">Non-Vegetarian</option>
+                    <option value="Gluten-Free">Gluten-Free</option>
+                    <option value="Dairy-Free">Dairy-Free</option>
+                  </select>
+                </div>
+                <div class="col-auto mbr-section-btn">
+                  <button type="button" class="w-100 btn btn-secondary display-7" onclick="generateMealPlan()">Generate Meal Plans Now</button>
+                </div>
+              </div>
+            </form>
+            <!-- Container for meal plan display -->
+            <div id="meal-plan-container"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="display-7" style="padding: 0; align-items: center; justify-content: center; flex-wrap: wrap; align-content: center; display: flex; position: relative; height: 4rem;">
+    <a href="https://mobiri.se/" style="flex: 1 1; height: 4rem; position: absolute; width: 100%; z-index: 1;">
+      <img alt="Mobirise.com" style="height: 4rem;" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==">
+    </a>
+    <p style="margin: 0; text-align: center;" class="display-7">Built with Mobirise &#8204;</p>
+    <a style="z-index:1" href="https://mobirise.com/html-builder.html">Best HTML5 Website Maker</a>
+  </section>
+
+  <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/smoothscroll/smooth-scroll.js"></script>
+  <script src="assets/ytplayer/index.js"></script>
+  <script src="assets/dropdown/js/navbar-dropdown.js"></script>
+  <script src="assets/theme/js/script.js"></script>
+  
+  <script>
+   const mealPlans = [
+  // Non-Vegetarian
+  {
+    name: "Kimchi Jjigae",
+    cuisine: "Korean",
+    diet: "Non-Vegetarian",
+    cooking_time: "1 hour",
+    calories: 500,
+    ingredients: ["Kimchi", "Pork", "Tofu", "Garlic", "Ginger", "Green Onion", "Soy Sauce"],
+    instructions: "1. Sauté pork, garlic, and ginger. 2. Add kimchi and cook for 10 minutes. 3. Add tofu and soy sauce, simmer for 20 minutes. 4. Garnish with green onions and serve."
+  },
+  {
+    name: "Chicken Alfredo",
+    cuisine: "Italian",
+    diet: "Non-Vegetarian",
+    cooking_time: "30 minutes",
+    calories: 600,
+    ingredients: ["Chicken Breast", "Fettuccine", "Cream", "Parmesan Cheese", "Garlic", "Butter"],
+    instructions: "1. Cook fettuccine according to package instructions. 2. Sauté chicken and garlic in butter. 3. Add cream and Parmesan cheese, and cook until thickened. 4. Toss with pasta and serve."
+  },
+  {
+    name: "Beef Tacos",
+    cuisine: "Mexican",
+    diet: "Non-Vegetarian",
+    cooking_time: "25 minutes",
+    calories: 450,
+    ingredients: ["Ground Beef", "Taco Seasoning", "Tortillas", "Lettuce", "Tomato", "Cheese"],
+    instructions: "1. Cook ground beef with taco seasoning. 2. Fill tortillas with beef and toppings. 3. Serve with lettuce, tomato, and cheese."
+  },
+  {
+    name: "Salmon Teriyaki",
+    cuisine: "Japanese",
+    diet: "Non-Vegetarian",
+    cooking_time: "20 minutes",
+    calories: 350,
+    ingredients: ["Salmon Fillets", "Teriyaki Sauce", "Garlic", "Ginger", "Green Onion"],
+    instructions: "1. Marinate salmon in teriyaki sauce, garlic, and ginger. 2. Grill or bake until cooked through. 3. Garnish with green onions and serve."
+  },
+  {
+    name: "Pork Schnitzel",
+    cuisine: "German",
+    diet: "Non-Vegetarian",
+    cooking_time: "40 minutes",
+    calories: 700,
+    ingredients: ["Pork Cutlets", "Flour", "Eggs", "Bread Crumbs", "Lemon", "Parsley"],
+    instructions: "1. Dredge pork cutlets in flour, eggs, and bread crumbs. 2. Fry in oil until golden brown. 3. Serve with lemon wedges and parsley."
+  },
+
+  // Vegetarian
+  {
+    name: "Sweet Potato Noodles Stir-Fry",
+    cuisine: "Asian",
+    diet: "Vegetarian",
+    cooking_time: "30 minutes",
+    calories: 400,
+    ingredients: ["Sweet Potato Noodles", "Vegetables", "Soy Sauce", "Sugar", "Garlic", "Sesame Oil"],
+    instructions: "1. Cook noodles and vegetables separately. 2. Stir-fry vegetables with soy sauce, sugar, garlic, and sesame oil. 3. Mix noodles and vegetables together. 4. Serve warm or at room temperature."
+  },
+  {
+    name: "Vegetable Curry",
+    cuisine: "Indian",
+    diet: "Vegetarian",
+    cooking_time: "45 minutes",
+    calories: 350,
+    ingredients: ["Mixed Vegetables", "Coconut Milk", "Curry Powder", "Onion", "Garlic", "Ginger"],
+    instructions: "1. Sauté onion, garlic, and ginger. 2. Add vegetables and curry powder, and cook for 5 minutes. 3. Stir in coconut milk and simmer until vegetables are tender. 4. Serve with rice."
+  },
+  {
+    name: "Caprese Salad",
+    cuisine: "Italian",
+    diet: "Vegetarian",
+    cooking_time: "15 minutes",
+    calories: 250,
+    ingredients: ["Tomatoes", "Mozzarella Cheese", "Basil", "Olive Oil", "Balsamic Vinegar"],
+    instructions: "1. Slice tomatoes and mozzarella cheese. 2. Arrange on a plate with basil leaves. 3. Drizzle with olive oil and balsamic vinegar."
+  },
+  {
+    name: "Quinoa Salad",
+    cuisine: "Mediterranean",
+    diet: "Vegetarian",
+    cooking_time: "20 minutes",
+    calories: 300,
+    ingredients: ["Quinoa", "Cucumber", "Tomato", "Feta Cheese", "Olive Oil", "Lemon Juice"],
+    instructions: "1. Cook quinoa and let it cool. 2. Mix with diced cucumber, tomato, and feta cheese. 3. Dress with olive oil and lemon juice."
+  },
+  {
+    name: "Vegetarian Chili",
+    cuisine: "American",
+    diet: "Vegetarian",
+    cooking_time: "40 minutes",
+    calories: 400,
+    ingredients: ["Kidney Beans", "Black Beans", "Tomatoes", "Onion", "Bell Peppers", "Chili Powder"],
+    instructions: "1. Sauté onion and bell peppers. 2. Add beans, tomatoes, and chili powder. 3. Simmer for 30 minutes. 4. Serve with your favorite toppings."
+  },
+
+  // Vegan
+  {
+    name: "Vegan Tacos",
+    cuisine: "Mexican",
+    diet: "Vegan",
+    cooking_time: "20 minutes",
+    calories: 350,
+    ingredients: ["Tortillas", "Black Beans", "Corn", "Avocado", "Tomato", "Lettuce", "Lime"],
+    instructions: "1. Heat tortillas. 2. Mix beans, corn, and diced vegetables. 3. Fill tortillas with the mixture. 4. Top with avocado and lime juice."
+  },
+  {
+    name: "Chickpea Salad",
+    cuisine: "Mediterranean",
+    diet: "Vegan",
+    cooking_time: "15 minutes",
+    calories: 300,
+    ingredients: ["Chickpeas", "Cucumber", "Tomato", "Red Onion", "Olive Oil", "Lemon Juice"],
+    instructions: "1. Mix chickpeas with diced cucumber, tomato, and red onion. 2. Dress with olive oil and lemon juice."
+  },
+  {
+    name: "Vegan Pasta Primavera",
+    cuisine: "Italian",
+    diet: "Vegan",
+    cooking_time: "30 minutes",
+    calories: 400,
+    ingredients: ["Pasta", "Mixed Vegetables", "Olive Oil", "Garlic", "Basil"],
+    instructions: "1. Cook pasta. 2. Sauté vegetables and garlic in olive oil. 3. Toss with pasta and basil."
+  },
+  {
+    name: "Lentil Soup",
+    cuisine: "Middle Eastern",
+    diet: "Vegan",
+    cooking_time: "45 minutes",
+    calories: 350,
+    ingredients: ["Lentils", "Carrots", "Celery", "Tomatoes", "Onion", "Cumin"],
+    instructions: "1. Sauté onions, carrots, and celery. 2. Add lentils, tomatoes, and cumin. 3. Simmer until lentils are tender. 4. Serve warm."
+  },
+  {
+    name: "Vegan Buddha Bowl",
+    cuisine: "Asian",
+    diet: "Vegan",
+    cooking_time: "25 minutes",
+    calories: 400,
+    ingredients: ["Brown Rice", "Roasted Vegetables", "Hummus", "Avocado", "Spinach"],
+    instructions: "1. Cook brown rice. 2. Arrange rice, roasted vegetables, hummus, avocado, and spinach in a bowl. 3. Drizzle with your favorite dressing."
+  },
+
+  // Gluten-Free
+  {
+    name: "Gluten-Free Pancakes",
+    cuisine: "American",
+    diet: "Gluten-Free",
+    cooking_time: "15 minutes",
+    calories: 250,
+    ingredients: ["Gluten-Free Flour", "Milk", "Eggs", "Sugar", "Baking Powder", "Butter"],
+    instructions: "1. Mix flour, sugar, and baking powder. 2. Add milk, eggs, and melted butter. 3. Cook pancakes on a hot griddle until bubbles form. 4. Flip and cook until golden brown."
+  },
+  {
+    name: "Quinoa Salad",
+    cuisine: "Mediterranean",
+    diet: "Gluten-Free",
+    cooking_time: "20 minutes",
+    calories: 300,
+    ingredients: ["Quinoa", "Cucumber", "Tomato", "Feta Cheese", "Olive Oil", "Lemon Juice"],
+    instructions: "1. Cook quinoa and let it cool. 2. Mix with diced cucumber, tomato, and feta cheese. 3. Dress with olive oil and lemon juice."
+  },
+  {
+    name: "Grilled Chicken with Veggies",
+    cuisine: "American",
+    diet: "Gluten-Free",
+    cooking_time: "30 minutes",
+    calories: 400,
+    ingredients: ["Chicken Breast", "Bell Peppers", "Zucchini", "Olive Oil", "Garlic", "Rosemary"],
+    instructions: "1. Marinate chicken with olive oil, garlic, and rosemary. 2. Grill chicken and vegetables until cooked through. 3. Serve with a side of your choice."
+  },
+  {
+    name: "Stuffed Bell Peppers",
+    cuisine: "Mediterranean",
+    diet: "Gluten-Free",
+    cooking_time: "40 minutes",
+    calories: 350,
+    ingredients: ["Bell Peppers", "Ground Turkey", "Quinoa", "Tomato Sauce", "Onion", "Garlic"],
+    instructions: "1. Cook quinoa and mix with ground turkey and tomato sauce. 2. Stuff bell peppers with the mixture. 3. Bake until peppers are tender."
+  },
+  {
+    name: "Baked Sweet Potatoes",
+    cuisine: "American",
+    diet: "Gluten-Free",
+    cooking_time: "45 minutes",
+    calories: 300,
+    ingredients: ["Sweet Potatoes", "Olive Oil", "Salt", "Pepper"],
+    instructions: "1. Rub sweet potatoes with olive oil, salt, and pepper. 2. Bake until tender. 3. Serve with your favorite toppings."
+  },
+
+  // Dairy-Free
+  {
+    name: "Dairy-Free Smoothie",
+    cuisine: "Smoothie",
+    diet: "Dairy-Free",
+    cooking_time: "5 minutes",
+    calories: 200,
+    ingredients: ["Almond Milk", "Banana", "Berries", "Spinach", "Honey"],
+    instructions: "1. Blend all ingredients until smooth. 2. Serve chilled."
+  },
+  {
+    name: "Avocado Toast",
+    cuisine: "American",
+    diet: "Dairy-Free",
+    cooking_time: "10 minutes",
+    calories: 250,
+    ingredients: ["Bread", "Avocado", "Lemon Juice", "Salt", "Pepper"],
+    instructions: "1. Toast the bread. 2. Mash avocado with lemon juice, salt, and pepper. 3. Spread on toast and serve."
+  },
+  {
+    name: "Chia Pudding",
+    cuisine: "Healthy",
+    diet: "Dairy-Free",
+    cooking_time: "8 hours (overnight)",
+    calories: 300,
+    ingredients: ["Chia Seeds", "Coconut Milk", "Maple Syrup", "Vanilla Extract"],
+    instructions: "1. Mix chia seeds with coconut milk, maple syrup, and vanilla extract. 2. Refrigerate overnight. 3. Serve with fresh fruit."
+  },
+  {
+    name: "Roasted Chickpeas",
+    cuisine: "Healthy",
+    diet: "Dairy-Free",
+    cooking_time: "30 minutes",
+    calories: 200,
+    ingredients: ["Chickpeas", "Olive Oil", "Paprika", "Cumin", "Salt"],
+    instructions: "1. Toss chickpeas with olive oil and spices. 2. Roast until crispy. 3. Serve as a snack or salad topping."
+  },
+  {
+    name: "Butternut Squash Soup",
+    cuisine: "American",
+    diet: "Dairy-Free",
+    cooking_time: "45 minutes",
+    calories: 250,
+    ingredients: ["Butternut Squash", "Onion", "Garlic", "Vegetable Broth", "Olive Oil"],
+    instructions: "1. Sauté onion and garlic in olive oil. 2. Add butternut squash and vegetable broth. 3. Simmer until squash is tender. 4. Blend until smooth and serve."
+  }
+];
+
+
+    function generateMealPlan() {
+      const diet = document.getElementById('diet-select').value;
+      if (!diet) {
+        alert('Please select a dietary need.');
+        return;
+      }
+      
+      // Filter recipes based on selected diet
+      const filteredPlans = mealPlans.filter(plan => plan.diet === diet);
+
+      // Pick a random recipe from the filtered list
+      const randomPlan = filteredPlans[Math.floor(Math.random() * filteredPlans.length)];
+
+      // Display the meal plan
+      const container = document.getElementById('meal-plan-container');
+      container.innerHTML = '';
+      if (randomPlan) {
+        const cardHtml = `
+          <div class="meal-card">
+            <h3>${randomPlan.name}</h3>
+            <p><strong>Cuisine:</strong> ${randomPlan.cuisine}</p>
+            <p><strong>Diet:</strong> ${randomPlan.diet}</p>
+            <p><strong>Cooking Time:</strong> ${randomPlan.cooking_time}</p>
+            <p><strong>Calories:</strong> ${randomPlan.calories}</p>
+            <p><strong>Ingredients:</strong> ${randomPlan.ingredients.join(', ')}</p>
+            <p><strong>Instructions:</strong> ${randomPlan.instructions}</p>
+            <button onclick="saveRecipeAsImage()">Save Recipe</button>
+          </div>
+        `;
+        container.innerHTML = cardHtml;
+      } else {
+        container.innerHTML = '<p>No recipes available for the selected dietary need.</p>';
+      }
+    }
+
+    function saveRecipeAsImage() {
+      const container = document.getElementById('meal-plan-container');
+      html2canvas(container).then(canvas => {
+        const link = document.createElement('a');
+        link.href = canvas.toDataURL('image/png');
+        link.download = 'meal-plan.png';
+        link.click();
+      });
+    }
+  </script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  
+</body>
+</html>
